@@ -147,12 +147,12 @@
                         <!-- 裝飾外框 -->
                         <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-700 to-stone-600 rounded-3xl blur opacity-30"></div>
                         <div class="relative bg-stone-900 rounded-3xl p-3 border border-stone-800 shadow-2xl">
-                            <!-- 候選人照片 (預設對應 images/profile.jpg，若無則顯示佔位圖) -->
+                            <!-- 候選人直式形象照 (高度加大：h-[460px] sm:h-[540px]) -->
                             <img 
                                 src="images/profile.jpg" 
-                                onerror="this.onerror=null; this.src='https://placehold.co/800x1000/292524/fdfbf7?text=Teddy+Lin';" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x1100/292524/fdfbf7?text=Teddy+Lin';" 
                                 alt="林柏勛議員候選人形象照" 
-                                class="w-full h-[400px] sm:h-[450px] object-cover object-top rounded-2xl shadow-inner"
+                                class="w-full h-[460px] sm:h-[540px] object-cover rounded-2xl shadow-inner"
                             />
                             <div class="absolute bottom-6 left-6 right-6 bg-stone-950/80 backdrop-blur-md p-3.5 rounded-2xl border border-stone-800 text-center">
                                 <span class="text-sm font-bold text-stone-100 block">林柏勛 Teddy Lin</span>
@@ -297,7 +297,7 @@
         </div>
     </section>
 
-    <!-- 未來政見 (1.5 屏高度：城市永續 與 體制改革) -->
+    <!-- 未來政見 (城市永續 與 體制改革) -->
     <section id="policies" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -419,46 +419,46 @@
         </div>
     </section>
 
-    <!-- 影片專區 (YouTube 嵌入區塊) -->
+    <!-- 影片專區 (YouTube Shorts 嵌入區塊) -->
     <section id="videos" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
                 <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">Video Insights</span>
-                <h2 class="text-3xl font-extrabold text-stone-900">宣講與政策影片</h2>
-                <p class="text-stone-600 mt-2 text-sm">觀看柏勛的政見發表、質詢評論與街頭短講實錄。</p>
+                <h2 class="text-3xl font-extrabold text-stone-900">影音短講專區</h2>
+                <p class="text-stone-600 mt-2 text-sm">觀看柏勛的政策短講、街頭觀察與改革理念。</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
-                <!-- 嵌入 YouTube 影片一 -->
-                <div class="bg-[#fdfbf7] p-4 rounded-2xl border border-stone-200 shadow-sm">
-                    <div class="relative w-full overflow-hidden rounded-xl pt-[56.25%] shadow-md">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-4xl mx-auto">
+                <!-- YouTube Shorts 影片一 -->
+                <div class="bg-[#fdfbf7] p-4 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
+                    <div class="relative w-full max-w-[315px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
                         <iframe 
                             class="absolute top-0 left-0 w-full h-full rounded-xl" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="林柏勛政策宣講影片" 
+                            src="https://www.youtube.com/embed/ylm3hBMNlfE" 
+                            title="樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
                     </div>
-                    <h3 class="text-base font-bold text-stone-900 mt-4 px-1">改變交通與城市願景宣講實錄</h3>
-                    <p class="text-xs text-stone-500 mt-1 px-1">深入解析人本交通、公車改革與人行道拓寬的必要性。</p>
+                    <h3 class="text-base font-bold text-stone-900 mt-4 text-center px-1">樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？</h3>
+                    <p class="text-xs text-stone-500 mt-1 text-center px-1">樹木保護與都市綠化政策實錄</p>
                 </div>
 
-                <!-- 嵌入 YouTube 影片二 -->
-                <div class="bg-[#fdfbf7] p-4 rounded-2xl border border-stone-200 shadow-sm">
-                    <div class="relative w-full overflow-hidden rounded-xl pt-[56.25%] shadow-md">
+                <!-- YouTube Shorts 影片二 -->
+                <div class="bg-[#fdfbf7] p-4 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
+                    <div class="relative w-full max-w-[315px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
                         <iframe 
                             class="absolute top-0 left-0 w-full h-full rounded-xl" 
-                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
-                            title="台北冷芝士節目訪談" 
+                            src="https://www.youtube.com/embed/8wgO2PesFB8" 
+                            title="台灣藍鵲的家 沒有強制都更 祖厝前面狂炸" 
                             frameborder="0" 
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
                             allowfullscreen>
                         </iframe>
                     </div>
-                    <h3 class="text-base font-bold text-stone-900 mt-4 px-1">《台北冷芝士》政策深度訪談</h3>
-                    <p class="text-xs text-stone-500 mt-1 px-1">從城市空間到公共衛生，與各界專家深入對談。</p>
+                    <h3 class="text-base font-bold text-stone-900 mt-4 text-center px-1">台灣藍鵲的家 沒有強制都更 祖厝前面狂炸</h3>
+                    <p class="text-xs text-stone-500 mt-1 text-center px-1">都市開發與生態居住權益探討</p>
                 </div>
             </div>
         </div>
