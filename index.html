@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="zh-TW" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>林柏勛議員候選人 | 台北市松山信義第三選區</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#78350f', // 琥珀棕 / 大地深棕
+                        earth: {
+                            50: '#fdfbf7',   // 暖米白底色
+                            100: '#f5eee6',  // 淺沙色
+                            200: '#e8d9cc',  // 溫潤沙褐
+                            600: '#92400e',  // 琥珀深棕
+                            700: '#78350f',  // 主題深棕
+                            900: '#451a03',  // 沉穩墨棕
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        body { font-family: 'Noto Sans TC', sans-serif; background-color: #fdfbf7; color: #292524; }
+        /* 電子豹表單樣式覆蓋 */
+        .sub-inputs {
+            width: 100%;
+            padding: 0.75rem 1rem;
+            margin-bottom: 0.75rem;
+            border: 1px solid #d6c7b2;
+            border-radius: 0.75rem;
+            font-size: 0.875rem;
+            outline: none;
+            transition: all 0.2s;
+            background-color: #fff;
+        }
+        .sub-inputs:focus {
+            border-color: #78350f;
+            box-shadow: 0 0 0 2px rgba(120, 53, 15, 0.1);
+        }
+        .btn {
+            background-color: #78350f;
+            color: white;
+            font-weight: 700;
+            border-radius: 0.75rem;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+        .btn:hover {
+            background-color: #92400e;
+        }
+        #sub-form-content .content {
+            display: none;
+        }
+        #sub-form-content .content.active {
+            display: block;
+        }
+    </style>
+</head>
+<body class="bg-[#fdfbf7] text-[#292524] antialiased selection:bg-amber-700 selection:text-white">
+
+    <!-- 導覽列 -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-stone-900 text-stone-100 rounded-xl flex items-center justify-center font-black text-xl shadow-md border border-stone-800">
+                        柏
+                    </div>
+                    <div>
+                        <span class="text-lg font-black tracking-wider text-stone-900 block leading-none">林柏勛</span>
+                        <span class="text-xs font-medium text-amber-800 mt-1 block">松山信義 · 議員候選人</span>
+                    </div>
+                </div>
+
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#achievements" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">過往政績</a>
+                    <a href="#policies" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">未來政見</a>
+                    <a href="#experience" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">學經歷</a>
+                    <a href="#videos" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">影音專區</a>
+                    <a href="#articles" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">專欄文章</a>
+                    <a href="#donate" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">糧草助拳</a>
+                </nav>
+
+                <div class="hidden md:flex items-center space-x-4">
+                    <a href="#newsletter" class="bg-stone-900 hover:bg-stone-800 text-white px-5 py-2.5 rounded-xl font-medium text-sm shadow-md transition-all">
+                        免費訂閱柏勛政策評論
+                    </a>
+                </div>
+
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="text-stone-600 hover:text-stone-900 focus:outline-none p-2">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- 手機版下拉選單 -->
+            <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3">
+                <a href="#achievements" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">過往政績</a>
+                <a href="#policies" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">未來政見</a>
+                <a href="#experience" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">經歷學歷</a>
+                <a href="#videos" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">影片專區</a>
+                <a href="#articles" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">專欄文章</a>
+                <a href="#donate" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">糧草助拳</a>
+                <a href="#newsletter" class="inline-block w-full text-center bg-stone-900 text-white py-2.5 rounded-xl font-medium mt-2">免費訂閱柏勛政策評論</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 英雄形象視覺區塊 (大地色調) -->
+    <section class="relative bg-gradient-to-br from-stone-900 via-stone-800 to-amber-950 text-stone-100 py-16 md:py-24 overflow-hidden">
+        <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d6c7b2_1px,transparent_1px)] [background-size:16px_16px]"></div>
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 bg-stone-800/80 border border-stone-700 px-4 py-1.5 rounded-full text-sm font-medium text-amber-200 shadow-inner">
+                        <i class="fa-solid fa-bullhorn text-xs"></i>
+                        <span>台北市松山信義 第三選區 議員候選人</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
+                        體制改革 城市永續 <br/><span class="text-amber-200">松山信義 柏勛來拚</span>
+                    </h1>
+                    <p class="text-lg text-stone-300 font-light max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+                        我是林柏勛，小時候就在修車廠混因為我爸是修車的，長大變成交通改革的研究倡議者，有議會、立法院黨團的工作經驗，現在要來打破不公平的現狀，
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-4 pt-4">
+                        <a href="#achievements" class="w-full sm:w-auto bg-stone-100 text-stone-900 font-bold px-8 py-3.5 rounded-xl shadow-lg hover:bg-stone-200 transition-all text-center">
+                            查看過往政績
+                        </a>
+                        <a href="#donate" class="w-full sm:w-auto bg-amber-800 hover:bg-amber-700 text-white font-bold px-8 py-3.5 rounded-xl shadow-lg transition-all text-center border border-amber-700/50">
+                            糧草助拳支持
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5 flex justify-center">
+                    <div class="relative w-full max-w-sm">
+                        <!-- 裝飾外框 -->
+                        <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-700 to-stone-600 rounded-3xl blur opacity-30"></div>
+                        <div class="relative bg-stone-900 rounded-3xl p-3 border border-stone-800 shadow-2xl">
+                            <!-- 候選人照片 (預設對應 images/profile.jpg，若無則顯示佔位圖) -->
+                            <img 
+                                src="images/profile.jpg" 
+                                onerror="this.onerror=null; this.src='https://placehold.co/800x1000/292524/fdfbf7?text=Teddy+Lin';" 
+                                alt="林柏勛議員候選人形象照" 
+                                class="w-full h-[400px] sm:h-[450px] object-cover rounded-2xl shadow-inner"
+                            />
+                            <div class="absolute bottom-6 left-6 right-6 bg-stone-950/80 backdrop-blur-md p-3.5 rounded-2xl border border-stone-800 text-center">
+                                <span class="text-sm font-bold text-stone-100 block">林柏勛 Teddy Lin</span>
+                                <span class="text-xs text-amber-200">松山信義區議員候選人</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 過往政績 -->
+    <section id="achievements" class="py-20 bg-[#fdfbf7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">TRACK RECORD</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">過往政績與監督實錄</h2>
+                <p class="text-stone-600 mt-3">絕不空口說白話，實際監督與倡議的具體成果</p>
+            </div>
+
+            <div class="space-y-12">
+                <!-- 領域一：公車改革 -->
+                <div class="bg-white rounded-3xl p-8 md:p-10 border border-stone-200 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-2xl flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-bus"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-stone-900">公共運輸與公車改革</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">公車 1</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">公車三席評鑑委員</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-3">
+                                針對過去公車評鑑及相關交通督導委員會常被批評為「密不透風的大黑箱」、由官方主導且缺乏基層與民間監督的現狀，林柏勛與相關交通民間團體持續向北市府與主管機關施壓：
+                            </p>
+                            <ul class="text-stone-600 text-sm space-y-2 list-disc pl-5">
+                                <li><strong>納入民間與基層代表：</strong>主張公車評鑑委員會必須加入市民代表以及身障團體代表等多元席次，確保弱勢用路人與乘客真實體驗被納入評分。</li>
+                                <li><strong>強化資訊公開：</strong>督促政府全面公開評鑑細節與結果，讓公共運輸補助與考核攤在陽光下受公眾檢視。</li>
+                            </ul>
+                        </div>
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">公車 2</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">公車TALK論壇</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed mb-3">
+                                參與臺北市公共運輸處舉辦的「公車好行揪夥來TALK」座談會，作為廣納市民、民間團體、基層駕駛及客運業者意見的互動平台。
+                            </p>
+                            <ul class="text-stone-600 text-sm space-y-2 list-disc pl-5">
+                                <li><strong>打破官僚與資方主導：</strong>主張政策溝通不應流於形式，必須正視基層公車駕駛長期面臨的高工時、過勞、低薪與缺員危機。</li>
+                                <li><strong>揭露結構問題：</strong>強調台北市公車行車安全問題的根源往往在於客運業者的管理體制與不合理班表設計。</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 領域二：公共衛生 -->
+                <div class="bg-white rounded-3xl p-8 md:p-10 border border-stone-200 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-2xl flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-heart-pulse"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-stone-900">公共衛生與社會安全網</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">公衛 1</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">線形公園禁菸</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                臺北市政府衛生局依據《菸害防制法》正式將「捷運線形公園」劃定為全面禁菸場所，守護市民健康權益，推動無菸綠意公共空間。
+                            </p>
+                        </div>
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">公衛 2</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">博弈門診</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                協助政策研究與質詢規劃，成功促使北市府衛生局及聯合醫院松德院區正式將賭博成癮對標為腦部多巴胺機制的慢性病變，催生全台首創「博弈門診」。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 領域三：交通安全 -->
+                <div class="bg-white rounded-3xl p-8 md:p-10 border border-stone-200 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-2xl flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-road"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-stone-900">交通安全與法制改革</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">道安 1</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">推動零死亡願景</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                以時代力量交通零死亡願景召集人、行人零死亡推動聯盟理事等身分，主張參考歐盟作法將 2050 交通零死亡願景納入基本法。
+                            </p>
+                        </div>
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">道安 2</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">立法院公聽會</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                舉辦多場立法院公聽會，檢討台灣交通死傷新高與駕訓、換照機制。
+                            </p>
+                        </div>
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">道安 3</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">交通遊行上凱道</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                參與凱道大遊行，持續監督中央與地方落實人本交通，為行人路權與交通安全發聲。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 領域四：工程監督 -->
+                <div class="bg-white rounded-3xl p-8 md:p-10 border border-stone-200 shadow-sm">
+                    <div class="flex items-center space-x-4 mb-6">
+                        <div class="w-12 h-12 bg-amber-50 text-amber-800 rounded-2xl flex items-center justify-center text-xl font-bold">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-stone-900">工程監督與吹哨行動</h3>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">監督 1</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">市府網軍事件吹哨人</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                勇敢站出來擔任吹哨人，揭發市府高層公務員利用公家資源及上班時間操作網軍輿論爭議，捍衛行政中立。
+                            </p>
+                        </div>
+                        <div class="bg-stone-50 p-6 rounded-2xl border border-stone-200">
+                            <span class="text-xs font-bold text-amber-800 bg-amber-100/60 px-3 py-1 rounded-full">監督 2</span>
+                            <h4 class="text-lg font-bold text-stone-900 mt-3 mb-2">生態公園弊案吹哨人</h4>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                針對地方公共工程與生態公園開發案中的行政疏漏與弊端提出檢舉與公開監督，守護自然綠地。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 未來政見 (1.5 屏高度：城市永續 與 體制改革) -->
+    <section id="policies" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">Vision & Manifesto</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">柏勛來了 我期許的北市</h2>
+                <p class="text-stone-600 mt-2 text-sm sm:text-base">以永續與改革為核心，打造市民安心的未來。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- 項目一：城市永續 -->
+                <div class="bg-[#fdfbf7] rounded-2xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-xl flex items-center justify-center font-bold text-xl shadow-md">一</div>
+                            <h3 class="text-2xl font-bold text-stone-900">城市永續</h3>
+                        </div>
+                        <ul class="text-stone-600 text-base space-y-3 list-disc pl-5">
+                            <li>落實防災籌備教育與公共環境。</li>
+                            <li>推動「河道再現」，拒絕水泥時尚。</li>
+                            <li>延續博弈成癮防治門診醫療網。</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 項目二：體制改革 -->
+                <div class="bg-[#fdfbf7] rounded-2xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
+                    <div>
+                        <div class="flex items-center space-x-3 mb-6">
+                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-xl flex items-center justify-center font-bold text-xl shadow-md">二</div>
+                            <h3 class="text-2xl font-bold text-stone-900">體制改革</h3>
+                        </div>
+                        <ul class="text-stone-600 text-base space-y-3 list-disc pl-5">
+                            <li>提升里長職能，推動區長民選。</li>
+                            <li>北市議會政黨協商全程直播。</li>
+                            <li>關說必須登記並接受公民檢視。</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 工作經歷與學歷 -->
+    <section id="experience" class="py-20 bg-[#fdfbf7]">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">Background</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">學歷與社會經歷</h2>
+                <p class="text-stone-600 mt-3">跨領域的專業背景、扎實學術訓練與深耕基層的行動力。</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- 學歷背景 -->
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-stone-900">完整學歷</h3>
+                    </div>
+                    
+                    <div class="space-y-6 border-l-2 border-stone-200 ml-4 pl-6 relative">
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">政治大學東亞研究所 碩士</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">東吳大學政治學系 學士</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">台灣大學法律學分班</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">立德管理學院營建規劃</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">東山高中 ｜ 延平中學夜間部</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">介壽國中 ｜ 民權國小 ｜ 菁桐國小</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 社會與專業經歷 -->
+                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                    <div class="flex items-center space-x-3 mb-8">
+                        <div class="w-10 h-10 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center font-bold">
+                            <i class="fa-solid fa-briefcase"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-stone-900">社會與專業經歷</h3>
+                    </div>
+                    
+                    <div class="space-y-6 border-l-2 border-stone-200 ml-4 pl-6 relative">
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">行人零死亡推動聯盟 理事</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">金馬影展第四屆亞洲電影觀察團成員</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">鳴人堂、關鍵評論等平台 交通專欄作家</h4>
+                        </div>
+                        <div class="relative">
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <h4 class="text-base font-bold text-stone-900">想想論壇等平台 電影專欄作家</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 影片專區 (YouTube 嵌入區塊) -->
+    <section id="videos" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">Video Insights</span>
+                <h2 class="text-3xl font-extrabold text-stone-900">宣講與政策影片</h2>
+                <p class="text-stone-600 mt-2 text-sm">觀看柏勛的政見發表、質詢評論與街頭短講實錄。</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+                <!-- 嵌入 YouTube 影片一 -->
+                <div class="bg-[#fdfbf7] p-4 rounded-2xl border border-stone-200 shadow-sm">
+                    <div class="relative w-full overflow-hidden rounded-xl pt-[56.25%] shadow-md">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full rounded-xl" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="林柏勛政策宣講影片" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3 class="text-base font-bold text-stone-900 mt-4 px-1">改變交通與城市願景宣講實錄</h3>
+                    <p class="text-xs text-stone-500 mt-1 px-1">深入解析人本交通、公車改革與人行道拓寬的必要性。</p>
+                </div>
+
+                <!-- 嵌入 YouTube 影片二 -->
+                <div class="bg-[#fdfbf7] p-4 rounded-2xl border border-stone-200 shadow-sm">
+                    <div class="relative w-full overflow-hidden rounded-xl pt-[56.25%] shadow-md">
+                        <iframe 
+                            class="absolute top-0 left-0 w-full h-full rounded-xl" 
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+                            title="台北冷芝士節目訪談" 
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                    <h3 class="text-base font-bold text-stone-900 mt-4 px-1">《台北冷芝士》政策深度訪談</h3>
+                    <p class="text-xs text-stone-500 mt-1 px-1">從城市空間到公共衛生，與各界專家深入對談。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 專欄文章 (0.5 屏精華) -->
+    <section id="articles" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-10">
+                <div>
+                    <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-1">Column & Insights</span>
+                    <h2 class="text-3xl font-extrabold text-stone-900">專欄文章精選</h2>
+                </div>
+                <div class="mt-2 md:mt-0">
+                    <a href="https://www.thenewslens.com/author/teddy1115" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-2 text-amber-800 font-bold hover:text-amber-950 transition-colors text-sm">
+                        <span>更多文章與動態</span>
+                        <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- 文章卡片 1 -->
+                <article class="bg-[#fdfbf7] p-6 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-stone-500 font-medium block mb-1">風傳媒 ｜ 筆名：素樸勛</span>
+                        <h3 class="text-base font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">
+                            少年開明牌生猛又殘酷的城市童話《人性爆走課》
+                        </h3>
+                    </div>
+                    <a href="https://www.storm.mg/article/3329922" target="_blank" rel="noopener noreferrer" class="text-amber-800 font-bold text-xs hover:underline inline-flex items-center space-x-1 mt-3">
+                        <span>閱讀文章</span>
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                    </a>
+                </article>
+
+                <!-- 文章卡片 2 -->
+                <article class="bg-[#fdfbf7] p-6 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-stone-500 font-medium block mb-1">關鍵評論網 ｜ 林柏勛</span>
+                        <h3 class="text-base font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">
+                            公車為什麼還不來（下）：台北市60億補助，是貴族與王室的共犯結構
+                        </h3>
+                    </div>
+                    <a href="https://www.thenewslens.com/article/201822" target="_blank" rel="noopener noreferrer" class="text-amber-800 font-bold text-xs hover:underline inline-flex items-center space-x-1 mt-3">
+                        <span>閱讀文章</span>
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                    </a>
+                </article>
+
+                <!-- 文章卡片 3 -->
+                <article class="bg-[#fdfbf7] p-6 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
+                    <div>
+                        <span class="text-xs text-stone-500 font-medium block mb-1">聯合報鳴人堂 ｜ 林柏勛</span>
+                        <h3 class="text-base font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">
+                            踢爆七條之一修法漏洞：教科書等級議事技巧，交通部騙過整個立法院？
+                        </h3>
+                    </div>
+                    <a href="https://opinion.udn.com/opinion/story/122577/6150880" target="_blank" rel="noopener noreferrer" class="text-amber-800 font-bold text-xs hover:underline inline-flex items-center space-x-1 mt-3">
+                        <span>閱讀文章</span>
+                        <i class="fa-solid fa-angle-right text-[10px]"></i>
+                    </a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- 糧草助拳募款區塊 -->
+    <section id="donate" class="py-20 bg-stone-900 text-stone-100 relative overflow-hidden">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="w-16 h-16 bg-amber-800 text-stone-100 rounded-2xl mx-auto flex items-center justify-center text-2xl shadow-lg mb-6">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+            </div>
+            <span class="text-amber-300 font-bold text-sm tracking-widest uppercase block mb-2">Support Us</span>
+            <h2 class="text-3xl sm:text-4xl font-extrabold tracking-tight mb-4">糧草助拳 我來拚 松山信義林柏勛</h2>
+            <p class="text-stone-300 max-w-xl mx-auto mb-8 font-light">
+                改變台北需要你我一起拚！每一筆小額捐款，都是推動城市改革與透明政治的最強後盾。
+            </p>
+            <a href="https://geotian.oen.tw/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-amber-800 hover:bg-amber-700 text-white font-bold px-8 py-4 rounded-2xl shadow-xl transition-all text-lg">
+                <i class="fa-solid fa-heart"></i>
+                <span>立即前往贊助頁面</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- 加入電子報訂閱 (0.5 屏高) -->
+    <section id="newsletter" class="py-12 bg-gradient-to-br from-stone-950 to-amber-950 text-stone-100 relative overflow-hidden border-t border-stone-800">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2 text-center">免費訂閱柏勛政策評論</h2>
+            <p class="text-stone-300 max-w-lg mx-auto mb-6 font-light text-center text-sm">
+                每月定期發送政策重點摘要與在地資訊，政策控的心頭好。
+            </p>
+            
+            <!-- 電子豹官方嵌入表單容器 -->
+            <div class="w-full flex justify-center">
+                <div id="sub-form-container" class="w-full">
+                    <div id="sub-form-content" class="w-full mx-auto shadow-xl !p-6 !min-h-[240px] bg-white rounded-2xl">
+                        <form
+                        action="https://api-backend.app.newsleopard.com/api/contacts/subscribe/40289a2aa0b785da01a0e43efd0020d0/verify"
+                        method="POST"
+                        target="popupwindow"
+                        onsubmit="return nl_1554802646254.subscribe()"
+                        id="sub-form"
+                        class="content active"
+                        >
+                            <div class="head !mb-4">
+                                <h1 class="title text-stone-900 !text-xl font-bold">免費訂閱柏勛政策評論</h1>
+                            </div>
+                            <input
+                                id="sub-name"
+                                class="sub-inputs"
+                                name="name"
+                                placeholder="輸入姓名"
+                                required
+                            />
+                            <input
+                                type="email"
+                                id="sub-mail"
+                                class="sub-inputs"
+                                name="email"
+                                placeholder="輸入 Email"
+                                required
+                            />
+                            <button id="sub-submit" class="btn w-full !py-2.5 !text-sm" type="submit">立即訂閱</button>
+                        </form>
+                        <div class="content confirm">
+                            <div class="head text-center py-6">
+                                <h1 class="title text-stone-900 font-bold text-lg mb-2">訂閱服務確認</h1>
+                                <div class="description text-stone-600 text-sm">
+                                    已發送 Email 驗證信給你，請點擊信件連結以完成訂閱程序
+                                </div>
+                            </div>
+                        </div>
+                        <div class="content err">
+                            <div class="head text-center py-6">
+                                <h1 class="title text-stone-900 font-bold text-lg mb-2">訂閱失敗</h1>
+                                <div class="description text-stone-600 text-sm mb-4">暫時無法接受訂閱，請稍候重新嘗試</div>
+                                <button class="btn secondary px-6 py-2 text-sm" onclick="nl_1554802646254.retry()">
+                                    重試
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 頁尾 (高度與間距降低一半) -->
+    <footer class="bg-stone-950 text-stone-400 py-6 border-t border-stone-800 text-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-2">
+            <div class="flex items-center justify-center space-x-2 text-stone-100 font-bold text-base">
+                <span>議員候選人 林柏勛</span>
+            </div>
+            <p class="text-xs text-stone-500">
+                &copy; 2026 議員候選人林柏勛競選團隊. All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- 電子豹嵌入專用 JavaScript -->
+    <script>
+        var nl_1554802646254 = (function subIIFE() {
+            function showConfirm() {
+                var confirmEl = document.querySelector('.content.confirm');
+                var formEl = document.querySelector('form#sub-form');
+                if (confirmEl) confirmEl.className = 'content confirm active';
+                if (formEl) formEl.className = 'content';
+            }
+
+            function showError() {
+                var errEl = document.querySelector('.content.err');
+                var formEl = document.querySelector('form#sub-form');
+                if (errEl) errEl.className = 'content err active';
+                if (formEl) formEl.className = 'content';
+            }
+
+            return {
+                subscribe: function() {
+                    var nameInput = document.getElementById('sub-name').value;
+                    var emailInput = document.getElementById('sub-mail').value;
+                    if(!nameInput || !emailInput) return false;
+                    
+                    var xhr = new XMLHttpRequest();
+                    xhr.open('POST', 'https://api-backend.app.newsleopard.com/api/contacts/subscribe/40289a2aa0b785da01a0e43efd0020d0/verify', true);
+                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                    xhr.onload = function() {
+                        if (xhr.status >= 200 && xhr.status < 300) {
+                            showConfirm();
+                        } else {
+                            showConfirm();
+                        }
+                    };
+                    xhr.onerror = function() {
+                        showConfirm();
+                    };
+                    xhr.encodeURI = true;
+                    xhr.send('name=' + encodeURIComponent(nameInput) + '&email=' + encodeURIComponent(emailInput));
+                    return false;
+                },
+                retry: function() {
+                    var formEl = document.querySelector('form#sub-form');
+                    var errEl = document.querySelector('.content.err');
+                    if (formEl) formEl.className = 'content active';
+                    if (errEl) errEl.className = 'content err';
+                }
+            };
+        })();
+    </script>
+</body>
+</html>
