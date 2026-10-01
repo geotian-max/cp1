@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@400;500;700;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Canvas Confetti for winning celebration -->
+    <!-- Canvas Confetti -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         body {
@@ -39,7 +39,7 @@
     <header class="sticky top-0 z-50 bg-[#fcfaf5]/90 backdrop-blur-md border-b-2 border-[#4a3b32]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
-                <div class="w-10 h-10 bg-[#2c241d] text-[#fcfaf5] rounded-xl flex items-center justify-center font-black text-xl shadow-md border-2 border-[#4a3b32]">
+                <div class="w-10 h-10 bg-[#2c241d] text-[#f4ebd0] rounded-xl flex items-center justify-center font-black text-xl shadow-md border-2 border-[#4a3b32]">
                     柏
                 </div>
                 <div>
@@ -76,7 +76,7 @@
         </div>
     </header>
 
-    <!-- 英雄視覺區塊 (Hero Section) - 完整大器修長高度 -->
+    <!-- 英雄區 (Hero Section) -->
     <section class="relative bg-[#f4ebd0] border-b-2 border-[#4a3b32] py-16 md:py-24 overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
@@ -100,7 +100,7 @@
                         </a>
                     </div>
                 </div>
-                <!-- 英雄照片區 (維持完整大器高度 h-[480px] sm:h-[560px]) -->
+
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-sm h-[480px] sm:h-[560px] bg-[#e7d7b5] rounded-3xl border-4 border-[#4a3b32] earth-shadow overflow-hidden flex items-center justify-center">
                         <img 
@@ -123,13 +123,13 @@
                 <h2 class="text-3xl font-black text-[#2c241d]">關於柏勛</h2>
             </div>
             <div class="bg-white p-8 sm:p-10 rounded-3xl border-3 border-[#4a3b32] earth-shadow space-y-4 text-[#5c4a3f] font-medium leading-relaxed">
-                <p>長年深耕地方基層與法案政策研究，從立法院黨團法案助理到台北市議會研究室法案主任,柏勛始終站在監督權力、推動改革的第一線。</p>
+                <p>長年深耕地方基層與法案政策研究，從立法院黨團法案助理到台北市議會研究室法案主任，柏勛始終站在監督權力、推動改革的第一線。</p>
                 <p>我們不只談理想，更拿出專業的法案與監督行動。面對行人地獄、公共工程瑕疵與行政濫權，我們挺身而出，為市民討回應有的公道與安全環境。</p>
             </div>
         </div>
     </section>
 
-    <!-- 學經歷專區 -->
+    <!-- 學經歷區 -->
     <section id="experience" class="py-16 bg-[#f4ebd0] border-b-2 border-[#4a3b32]">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -167,6 +167,7 @@
                         <li><strong>台北市議會研究室法案主任</strong></li>
                         <li><strong>行人零死亡推動聯盟</strong> 理事</li>
                         <li><strong>鳴人堂、關鍵評論等平台</strong> 交通專欄作家</li>
+                        <li><strong>《台北冷芝士》Podcast</strong> 主持人</li>
                     </ul>
                 </div>
             </div>
@@ -183,7 +184,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- 一、城市永續 -->
                 <div class="bg-white rounded-3xl p-8 border-3 border-[#4a3b32] earth-shadow flex flex-col justify-between">
                     <div>
                         <div class="flex items-center space-x-3 mb-6">
@@ -198,7 +198,6 @@
                     </div>
                 </div>
 
-                <!-- 二、街頭正義 -->
                 <div class="bg-white rounded-3xl p-8 border-3 border-[#4a3b32] earth-shadow flex flex-col justify-between">
                     <div>
                         <div class="flex items-center space-x-3 mb-6">
@@ -213,7 +212,6 @@
                     </div>
                 </div>
 
-                <!-- 三、體制改革 -->
                 <div class="bg-white rounded-3xl p-8 border-3 border-[#4a3b32] earth-shadow flex flex-col justify-between">
                     <div>
                         <div class="flex items-center space-x-3 mb-6">
@@ -317,7 +315,7 @@
         </div>
     </section>
 
-    <!-- 街頭運勢轉盤遊戲區 (左右兩側配置示意圖卡) -->
+    <!-- 街頭運勢轉盤遊戲區 (CANVAS + 左右雙圖卡示意) -->
     <section id="wheel-section" class="py-16 bg-[#f4ebd0] border-b-2 border-[#4a3b32]">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-10">
@@ -391,7 +389,6 @@
                 今天難得一路順暢，但過斑馬線還是要眼觀四面、耳聽八方！
             </p>
             
-            <!-- 圖卡顯示區 -->
             <div class="w-[280px] h-[200px] bg-stone-100 border-2 border-[#4a3b32] rounded-xl overflow-hidden mb-4 shadow-inner mx-auto flex items-center justify-center">
                 <img id="result-img" src="" alt="運勢圖卡" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='data:image/svg+xml;charset=UTF-8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22280%22 height=%22200%22 viewBox=%220 0 280 200%22%3E%3Crect fill=%22%23e2e8f0%22 width=%22280%22 height=%22200%22/%3E%3Ctext fill=%22%2364748b%22 font-family=%22sans-serif%22 font-size=%2216%22 font-weight=%22bold%22 x=%2250%25%22 y=%2250%25%22 text-anchor=%22middle%22 dominant-baseline=%22middle%22%3EFortune Card%3C/text%3E%3C/svg%3E';" />
             </div>
@@ -402,7 +399,7 @@
         </div>
     </div>
 
-    <!-- 訂閱與政治獻金 (Subscription & Donation Section) -->
+    <!-- 訂閱與政治獻金區塊 -->
     <section id="support" class="py-16 bg-[#fcfaf5] border-b-2 border-[#4a3b32]">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -412,7 +409,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                <!-- 訂閱電子報 -->
                 <div class="bg-white p-8 rounded-3xl border-3 border-[#4a3b32] earth-shadow flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-[#d97706] text-white rounded-2xl flex items-center justify-center font-bold text-xl border-2 border-[#4a3b32] mb-6">
@@ -423,15 +419,14 @@
                             掌握最新法案倡議、地方行程與街頭監督進度，不錯過任何關鍵改革時刻。
                         </p>
                     </div>
-                    <form onsubmit="event.preventDefault(); alert('感謝您的訂閱！我們將會定期發送政策與監督通訊給您。');" class="space-y-3">
+                    <form onsubmit="event.preventDefault(); alert('感謝您的訂閱！');" class="space-y-3">
                         <input type="email" placeholder="請輸入您的電子郵件信箱" required class="w-full px-4 py-3 rounded-xl border-2 border-[#4a3b32] text-sm focus:outline-none focus:ring-2 focus:ring-[#d97706]" />
-                        <button type="submit" class="w-full bg-[#2c241d] hover:bg-[#4a3b32] text-white font-black py-3 rounded-xl border-2 border-[#4a3b32] text-sm transition shadow-sm">
+                        <button type="submit" class="w-full bg-[#2c241d] hover:bg-[#4a3b32] text-white font-black py-3 rounded-xl border-2 border-[#4a3b32] text-sm transition shadow-sm cursor-pointer">
                             立即訂閱 ✉️
                         </button>
                     </form>
                 </div>
 
-                <!-- 政治獻金 / 小額捐款 -->
                 <div class="bg-white p-8 rounded-3xl border-3 border-[#4a3b32] earth-shadow flex flex-col justify-between">
                     <div>
                         <div class="w-12 h-12 bg-[#2c241d] text-white rounded-2xl flex items-center justify-center font-bold text-xl border-2 border-[#4a3b32] mb-6">
@@ -443,8 +438,8 @@
                         </p>
                     </div>
                     <div class="space-y-3">
-                        <a href="#donate-info" onclick="alert('政治獻金專戶募款資訊即將上線，感謝您的熱情相挺！'); return false;" class="block w-full bg-[#d97706] hover:bg-[#b45309] text-white font-black py-3 rounded-xl border-2 border-[#4a3b32] text-sm transition text-center shadow-sm">
-                            支持政治獻金專戶 💰
+                        <a href="https://sunshine.cy.gov.tw/" target="_blank" rel="noopener noreferrer" class="block w-full bg-[#d97706] hover:bg-[#b45309] text-white font-black py-3 rounded-xl border-2 border-[#4a3b32] text-sm transition text-center shadow-sm">
+                            前往監察院政治獻金申報平台 💰 ↗
                         </a>
                     </div>
                 </div>
@@ -464,7 +459,6 @@
         </div>
     </footer>
 
-    <!-- 互動轉盤 Canvas JavaScript -->
     <script>
         const canvas = document.getElementById('wheelCanvas');
         const ctx = canvas.getContext('2d');
@@ -499,7 +493,6 @@
             { name: "陳水扁", subtitle: "勇往直前迪迪龍", desc: "阿扁臭了嗎，不管前方多少違停阻擋，都要精神抖手。", color: "#10b981", weight: 4, filename: "fortune_card_21_chen_shui_bian.png" }
         ];
 
-        // 圖片預載入機制
         function preloadImages() {
             options.forEach(opt => {
                 const img = new Image();
@@ -554,7 +547,7 @@
                 ctx.textAlign = 'right';
                 ctx.textBaseline = 'middle';
                 ctx.fillStyle = '#2c241d';
-                ctx.font = 'bold 11px sans-serif';
+                ctx.font = 'bold 11px "Zen Maru Gothic", sans-serif';
                 ctx.fillText(opt.name, radius - 16, 0);
                 ctx.restore();
             });
@@ -640,7 +633,7 @@
                     resultCard.classList.remove('hidden');
 
                     confetti({
-                        particleCount: 80,
+                        particleCount: 60,
                         spread: 70,
                         origin: { y: 0.6 }
                     });
@@ -650,8 +643,10 @@
             requestAnimationFrame(animateSpin);
         }
 
-        if (spinBtn) spinBtn.addEventListener('click', spinWheel);
-        if (closeCardBtn) closeCardBtn.addEventListener('click', () => { resultCard.classList.add('hidden'); });
+        spinBtn.addEventListener('click', spinWheel);
+        closeCardBtn.addEventListener('click', () => {
+            resultCard.classList.add('hidden');
+        });
 
         setTimeout(resizeCanvas, 50);
     </script>
