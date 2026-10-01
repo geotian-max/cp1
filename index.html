@@ -757,7 +757,7 @@
         resultCard.className = 'fixed inset-0 bg-stone-950/70 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden';
         resultCard.innerHTML = `
             <div class="bg-white p-6 rounded-3xl border-4 border-stone-800 retro-shadow max-w-[340px] w-full flex flex-col items-center text-center animate-pop relative">
-                <div class="text-[11px] font-bold text-stone-400 uppercase mb-1">🎯 今日行人運勢解析：</div>
+                <div class="text-[11px] font-bold text-stone-400 uppercase mb-1">🎯 今日走走路 行人運勢解析：</div>
                 <div id="result-title" class="text-base font-black text-rose-600 mb-2">大吉 - 反攻大路順到家</div>
                 <p id="result-desc" class="text-xs font-medium text-stone-700 leading-relaxed bg-[#fdfbf7] p-3 rounded-2xl border-2 border-stone-300 mb-3 w-full">
                     今天難得一路順暢！
@@ -766,7 +766,7 @@
                     <img id="result-img" src="" alt="運勢圖卡" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/280x200/292524/fdfbf7?text=Fortune+Card';" />
                 </div>
                 <button id="close-card-btn" class="w-auto mx-auto bg-stone-900 hover:bg-stone-800 text-white font-black py-2 px-6 rounded-xl border-2 border-stone-800 text-xs cursor-pointer">
-                    知道了 👍
+                    再轉一次👍
                 </button>
             </div>
         `;
@@ -781,15 +781,15 @@
             { name: "大吉", subtitle: "反攻大路順到家", desc: "今天難得一路順暢，但過斑馬線還是要眼觀四面、耳聽八方！", color: "#34d399", weight: 6, filename: "fortune_card_01_da_ji.png" },
             { name: "兇", subtitle: "走路要看路 遇車退三步", desc: "出門極易踩到人行道破洞或撞上巨大變電箱，請把靈魂找回來。", color: "#f87171", weight: 8, filename: "fortune_card_02_xiong.png" },
             { name: "小吉", subtitle: "全部給我跑起來", desc: "人行道被機車和攤販塞滿了，今天只能靠閃躲技能一路小跑步通關。", color: "#fbbf24", weight: 8, filename: "fortune_card_03_xiao_ji.png" },
-            { name: "中吉", subtitle: "希望有人行道可以走", desc: "走著走著人行道突然消失要被迫走進車道，祈禱行人路權今天對你微笑。", color: "#60a5fa", weight: 8, filename: "fortune_card_04_zhong_ji.png" },
+            { name: "中吉", subtitle: "希望有人行道可以走", desc: "走著走著人行道突然消失要被迫走進車道，祈禱行人路權快來到。", color: "#60a5fa", weight: 8, filename: "fortune_card_04_zhong_ji.png" },
             { name: "大凶", subtitle: "步步危機 要小心", desc: "出門必踢到路霸盆栽，走路請務必攜帶雷達探測器！", color: "#e11d48", weight: 5, filename: "fortune_card_05_da_xiong.png" },
             { name: "劫運", subtitle: "錢包與路權的雙重劫難", desc: "走在人行道突然被違規汽車驚嚇，失膽又驚心。", color: "#c084fc", weight: 5, filename: "fortune_card_06_jie_yun.png" },
             { name: "食運", subtitle: "一路吃美食與閃避", desc: "雖然人行道被小吃攤佔滿寸步難行，但也一路聞到碳烤雞排香氣。", color: "#fb923c", weight: 6, filename: "fortune_card_07_shi_shang.png" },
             { name: "財運", subtitle: "地上撿到發票", desc: "今天財運奇佳，成功閃過違規停車陷阱，還在騎樓角落順利通行！", color: "#facc15", weight: 5, filename: "fortune_card_08_cai_yun.png" },
             { name: "官運", subtitle: "遇到警察伯伯指揮", desc: "人行道違規停車全被開單！行人路權大獲全勝，走路威風凜凜。", color: "#38bdf8", weight: 4, filename: "fortune_card_09_guan_yun.png" },
             { name: "印運", subtitle: "長輩庇佑與提醒", desc: "路邊阿嬤看你走得辛苦，好心提醒前面有坑洞，獲得滿滿溫暖。", color: "#f472b6", weight: 6, filename: "fortune_card_10_yin_yun.png" },
-            { name: "臭肚臍", subtitle: "莫名其妙被念", desc: "走在路上莫名其妙被路人行注目禮，今天運氣有點荒謬。", color: "#a78bfa", weight: 6, filename: "fortune_card_11_chou_du_qi.png" },
-            { name: "倒楣鬼", subtitle: "水逆大發作", desc: "連踩兩個水漥，鞋子全濕，今天諸事不宜請早點回家。", color: "#64748b", weight: 6, filename: "fortune_card_12_dao_mei.png" },
+            { name: "臭肚臍", subtitle: "莫名其妙被念", desc: "走在路上莫名其妙被路人行注目禮，今天運氣有點臭，有點荒謬。", color: "#a78bfa", weight: 6, filename: "fortune_card_11_chou_du_qi.png" },
+            { name: "倒楣鬼", subtitle: "水逆大發作", desc: "連踩兩個水漥，鞋子全濕，今天諸事不宜請早點回家摸渺渺。", color: "#64748b", weight: 6, filename: "fortune_card_12_dao_mei.png" },
             { name: "加班", subtitle: "逃不掉的命運", desc: "本想準時下班，人行道卻塞車塞到天荒地老，直接加班到深夜。", color: "#f97316", weight: 7, filename: "fortune_card_13_jia_ban.png" },
             { name: "掃把星", subtitle: "路障磁鐵", desc: "所有路邊違規招牌和障礙物今天好像都在對你招手。", color: "#ef4444", weight: 5, filename: "fortune_card_14_sao_ba.png" },
             { name: "邱比特", subtitle: "街角浪漫相遇", desc: "在閃避機車的狼狽瞬間，竟然遇見了同樣在閃避的命運之人？", color: "#fb7185", weight: 4, filename: "fortune_card_15_qiu_bi_te.png" },
