@@ -38,6 +38,8 @@
             100% { transform: scale(1); opacity: 1; }
         }
         .animate-pop { animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
+        .form-panel { display: none; }
+        .form-panel.active { display: block; }
     </style>
 </head>
 <body class="bg-[#fdfbf7] text-[#292524] antialiased selection:bg-amber-800 selection:text-white">
@@ -57,9 +59,10 @@
                 </div>
 
                 <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#about" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">關於柏勛</a>
                     <a href="#achievements" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">過往政績</a>
                     <a href="#policies" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">未來政見</a>
-                    <a href="#game" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">互動輪盤</a>
+                    <a href="#wheel-section" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">街頭運勢</a>
                     <a href="#experience" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">學經歷</a>
                     <a href="#videos" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">影音專區</a>
                     <a href="#articles" class="text-stone-600 hover:text-stone-900 font-medium text-sm transition-colors">專欄文章</a>
@@ -80,9 +83,10 @@
             </div>
 
             <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-stone-200 px-4 pt-2 pb-6 space-y-3">
+                <a href="#about" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">關於柏勛</a>
                 <a href="#achievements" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">過往政績</a>
                 <a href="#policies" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">未來政見</a>
-                <a href="#game" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">互動輪盤</a>
+                <a href="#wheel-section" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">街頭運勢</a>
                 <a href="#experience" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">經歷學歷</a>
                 <a href="#videos" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">影片專區</a>
                 <a href="#articles" class="block py-2 text-stone-600 hover:text-stone-900 font-medium">專欄文章</a>
@@ -139,8 +143,26 @@
         </div>
     </section>
 
+    <!-- 關於柏勛區 -->
+    <section id="about" class="py-20 bg-[#fdfbf7]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">ABOUT ME</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">關於柏勛</h2>
+            </div>
+            <div class="bg-white p-8 md:p-10 rounded-3xl border border-stone-200 shadow-sm space-y-6 text-stone-700 text-base md:text-lg leading-relaxed">
+                <p>
+                    我是林柏勛，從小在基層修車廠的環境中長大，深刻體會勞動者的辛勞與不易。長年投入交通安全倡議、行人路權改革、地方工程監督與議會體制透明化。
+                </p>
+                <p>
+                    過去擔任立法院黨團法案助理與台北市議會研究室法案主任期間，我不斷透過專業法案與實際調查，揭發不公、對抗黑箱。現在，我希望將這份追求正義與城市永續的堅持帶進松山信義區議會，成為市民最堅實的改革力量！
+                </p>
+            </div>
+        </div>
+    </section>
+
     <!-- 過往政績與監督實錄 -->
-    <section id="achievements" class="py-20 bg-[#fdfbf7]">
+    <section id="achievements" class="py-20 bg-stone-100/60 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
                 <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">TRACK RECORD</span>
@@ -323,20 +345,20 @@
     </section>
 
     <!-- 三大核心政見 -->
-    <section id="policies" class="py-16 bg-white">
+    <section id="policies" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-12">
-                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">Vision & Manifesto</span>
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">VISION & MANIFESTO</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">三大核心政見</h2>
-                <p class="text-stone-600 mt-2 text-sm sm:text-base">結合過往倡議與實戰經驗，打造永續、安全、透明的台北市。</p>
+                <p class="text-stone-600 mt-3">結合過往倡議與實戰經驗，打造永續、安全、透明的台北市。</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
                 <!-- 一、城市永續 -->
-                <div class="bg-[#fdfbf7] rounded-2xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
+                <div class="bg-[#fdfbf7] rounded-3xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="flex items-center space-x-3 mb-6">
-                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-xl flex items-center justify-center font-bold text-xl shadow-md">一</div>
+                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">一</div>
                             <h3 class="text-xl font-bold text-stone-900">城市永續<br><span class="text-xs text-stone-500 font-normal">打造宜居城市</span></h3>
                         </div>
                         <ul class="text-stone-600 text-sm space-y-4">
@@ -348,10 +370,10 @@
                 </div>
 
                 <!-- 二、街頭正義 -->
-                <div class="bg-[#fdfbf7] rounded-2xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
+                <div class="bg-[#fdfbf7] rounded-3xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="flex items-center space-x-3 mb-6">
-                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-xl flex items-center justify-center font-bold text-xl shadow-md">二</div>
+                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">二</div>
                             <h3 class="text-xl font-bold text-stone-900">街頭正義<br><span class="text-xs text-stone-500 font-normal">出入平安 柏勛把關</span></h3>
                         </div>
                         <ul class="text-stone-600 text-sm space-y-4">
@@ -363,10 +385,10 @@
                 </div>
 
                 <!-- 三、體制改革 -->
-                <div class="bg-[#fdfbf7] rounded-2xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
+                <div class="bg-[#fdfbf7] rounded-3xl p-8 border border-stone-200 flex flex-col justify-between shadow-sm">
                     <div>
                         <div class="flex items-center space-x-3 mb-6">
-                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-xl flex items-center justify-center font-bold text-xl shadow-md">三</div>
+                            <div class="w-12 h-12 bg-stone-900 text-stone-100 rounded-2xl flex items-center justify-center font-bold text-xl shadow-md">三</div>
                             <h3 class="text-xl font-bold text-stone-900">體制改革<br><span class="text-xs text-stone-500 font-normal">打破權錢壟斷，落實透明政治</span></h3>
                         </div>
                         <ul class="text-stone-600 text-sm space-y-4">
@@ -380,75 +402,80 @@
         </div>
     </section>
 
-    <!-- 互動輪盤遊戲專區 -->
-    <section id="game" class="py-16 bg-[#f5eee6] border-y border-stone-200">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
-            <div class="text-center mb-8">
-                <span class="text-amber-800 font-bold text-xs tracking-widest uppercase block mb-2">INTERACTIVE GAME</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">台北人行道今日運勢預測</h2>
-                <p class="text-stone-600 mt-2 text-xs sm:text-sm font-medium">點擊轉動轉盤，看看你今天在台北街頭能抽到什麼運勢！</p>
+    <!-- 街頭運勢轉盤遊戲專區 (左右兩側配置示意圖卡) -->
+    <section id="wheel-section" class="py-20 bg-stone-100/60 border-t border-stone-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">INTERACTIVE GAME</span>
+                <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">台北人行道今日運勢預測</h2>
+                <p class="text-stone-600 mt-3 text-base">點擊轉動轉盤，看看你今天在台北街頭能抽到什麼運勢！</p>
             </div>
 
-            <div class="w-full max-w-sm flex flex-col items-center bg-white p-5 rounded-3xl border-3 border-stone-800 shadow-xl">
-                <div class="relative w-64 h-64 sm:w-72 sm:h-72 my-2 flex items-center justify-center aspect-square">
-                    <div class="absolute right-[-10px] top-1/2 -translate-y-1/2 z-30 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[20px] border-rose-500 drop-shadow-md"></div>
-                    
-                    <div class="w-full h-full rounded-full border-4 border-stone-800 retro-shadow overflow-hidden bg-white relative aspect-square">
-                        <canvas id="wheelCanvas" class="w-full h-full block aspect-square"></canvas>
-                        <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-                            <div class="w-14 h-14 bg-stone-900 rounded-full border-3 border-stone-800 shadow-inner flex items-center justify-center overflow-hidden p-1.5">
-                                <svg viewBox="0 0 100 100" class="w-full h-full fill-white" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M35 75 C30 85 28 92 28 92 C28 92 34 90 38 78 C42 85 45 92 46 92 C46 92 48 83 47 75 C55 72 65 72 70 78 C72 88 74 95 74 95 C74 95 76 88 77 72 C85 68 90 52 88 40 C86 25 78 15 78 15 C78 15 73 25 70 32 C65 22 55 18 45 22 C35 26 28 35 25 45 C22 55 25 68 35 75 Z" />
-                                    <circle cx="38" cy="48" r="4" />
-                                    <circle cx="50" cy="46" r="4" />
-                                    <polygon points="50,12 55,25 45,25" />
-                                    <circle cx="50" cy="8" r="3" />
-                                </svg>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center justify-center max-w-5xl mx-auto">
+                <!-- 左側示意圖卡 -->
+                <div class="hidden lg:flex lg:col-span-3 justify-center">
+                    <div class="w-52 bg-white p-4 rounded-3xl border-3 border-stone-800 retro-shadow transform -rotate-3 hover:rotate-0 transition duration-300">
+                        <div class="h-36 bg-stone-100 rounded-2xl border-2 border-stone-300 overflow-hidden mb-3 flex items-center justify-center">
+                            <img src="images/fortune_card_01_da_ji.png" alt="大吉示意" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/200x140/34d399/ffffff?text=Da+Ji';" />
+                        </div>
+                        <p class="text-xs font-black text-center text-stone-900">✨ 大吉 - 反攻大路順到家</p>
+                    </div>
+                </div>
+
+                <!-- 中間轉盤主體 -->
+                <div class="col-span-1 lg:col-span-6 flex flex-col items-center">
+                    <div class="w-full max-w-sm flex flex-col items-center bg-white p-6 rounded-3xl border-3 border-stone-800 retro-shadow">
+                        <div class="relative w-72 h-72 sm:w-80 sm:h-80 my-2 flex items-center justify-center aspect-square">
+                            <div class="absolute right-[-10px] top-1/2 -translate-y-1/2 z-30 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[20px] border-rose-500 drop-shadow-md"></div>
+                            
+                            <div class="w-full h-full rounded-full border-4 border-stone-800 retro-shadow overflow-hidden bg-white relative aspect-square">
+                                <canvas id="wheelCanvas" class="w-full h-full block aspect-square"></canvas>
+                                <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+                                    <div class="w-14 h-14 bg-stone-900 rounded-full border-3 border-stone-800 shadow-inner flex items-center justify-center p-1.5">
+                                        <svg viewBox="0 0 100 100" class="w-full h-full fill-white" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M35 75 C30 85 28 92 28 92 C28 92 34 90 38 78 C42 85 45 92 46 92 C46 92 48 83 47 75 C55 72 65 72 70 78 C72 88 74 95 74 95 C74 95 76 88 77 72 C85 68 90 52 88 40 C86 25 78 15 78 15 C78 15 73 25 70 32 C65 22 55 18 45 22 C35 26 28 35 25 45 C22 55 25 68 35 75 Z" />
+                                            <circle cx="38" cy="48" r="4" />
+                                            <circle cx="50" cy="46" r="4" />
+                                            <polygon points="50,12 55,25 45,25" />
+                                            <circle cx="50" cy="8" r="3" />
+                                        </svg>
+                                    </div>
+                                </div>
                             </div>
+                        </div>
+
+                        <div class="w-full mt-6">
+                            <button id="spin-btn" class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white font-black py-4 px-6 rounded-2xl border-3 border-stone-800 retro-shadow transition transform active:translate-y-1 text-base flex items-center justify-center space-x-2 cursor-pointer">
+                                <span>開始抽運勢 🎲</span>
+                            </button>
                         </div>
                     </div>
                 </div>
 
-                <div class="w-full px-2 mt-4">
-                    <button id="spin-btn" class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white font-black py-3 px-6 rounded-2xl border-3 border-stone-800 retro-shadow transition transform active:translate-y-1 text-sm flex items-center justify-center space-x-2 cursor-pointer">
-                        <span>開始抽運勢 🎲</span>
-                    </button>
-                </div>
-            </div>
-
-            <!-- 抽獎結果圖卡彈窗 (讀取 images/ 資料夾下的精確圖檔) -->
-            <div id="result-card" class="fixed inset-0 bg-stone-950/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
-                <div class="bg-white p-6 rounded-3xl border-4 border-stone-800 retro-shadow max-w-[340px] w-full flex flex-col items-center text-center relative animate-pop">
-                    <div class="text-[11px] font-bold text-stone-400 uppercase mb-1">🎯 今日行人運勢解析：</div>
-                    <div id="result-title" class="text-base font-black text-amber-800 mb-2">大吉 - 反攻大路順到家</div>
-                    <p id="result-desc" class="text-xs font-medium text-stone-700 leading-relaxed bg-[#fdfbf7] p-3 rounded-2xl border-2 border-stone-300 mb-3 w-full">
-                        今天一路順暢！
-                    </p>
-                    
-                    <!-- 圖片展示框 (讀取 images/ 資料夾下的對應圖檔) -->
-                    <div class="w-[280px] h-[200px] bg-stone-100 border-2 border-stone-300 rounded-lg overflow-hidden flex items-center justify-center mb-4 shadow-inner mx-auto">
-                        <img id="result-img" src="" alt="運勢圖卡" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/280x200/292524/fdfbf7?text=Fortune+Card';" />
+                <!-- 右側示意圖卡 -->
+                <div class="hidden lg:flex lg:col-span-3 justify-center">
+                    <div class="w-52 bg-white p-4 rounded-3xl border-3 border-stone-800 retro-shadow transform rotate-3 hover:rotate-0 transition duration-300">
+                        <div class="h-36 bg-stone-100 rounded-2xl border-2 border-stone-300 overflow-hidden mb-3 flex items-center justify-center">
+                            <img src="images/fortune_card_05_da_xiong.png" alt="大凶示意" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/200x140/e11d48/ffffff?text=Da+Xiong';" />
+                        </div>
+                        <p class="text-xs font-black text-center text-stone-900">⚠️ 大凶 - 步步危機要小心</p>
                     </div>
-
-                    <button id="close-card-btn" class="w-auto mx-auto bg-stone-900 hover:bg-stone-800 text-white font-black py-2 px-6 rounded-xl border-2 border-stone-800 text-xs cursor-pointer">
-                        知道了 👍
-                    </button>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 學經歷專區 -->
-    <section id="experience" class="py-20 bg-[#fdfbf7]">
+    <section id="experience" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
-                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">Background</span>
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-2">BACKGROUND</span>
                 <h2 class="text-3xl sm:text-4xl font-extrabold text-stone-900">學歷與社會經歷</h2>
                 <p class="text-stone-600 mt-3">跨領域的專業背景、扎實學術訓練與深耕基層的行動力。</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                <div class="bg-[#fdfbf7] rounded-3xl p-8 border border-stone-200 shadow-sm">
                     <div class="flex items-center space-x-3 mb-8">
                         <div class="w-10 h-10 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center font-bold">
                             <i class="fa-solid fa-graduation-cap"></i>
@@ -458,33 +485,33 @@
                     
                     <div class="space-y-6 border-l-2 border-stone-200 ml-4 pl-6 relative">
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">政治大學東亞研究所 碩士</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">東吳大學政治學系 學士</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">台灣大學法律學分班</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">立德管理學院營建規劃</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">東山高中 ｜ 延平中學夜間部</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">介壽國中 ｜ 民權國小 ｜ 菁桐國小</h4>
                         </div>
                     </div>
                 </div>
 
-                <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
+                <div class="bg-[#fdfbf7] rounded-3xl p-8 border border-stone-200 shadow-sm">
                     <div class="flex items-center space-x-3 mb-8">
                         <div class="w-10 h-10 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center font-bold">
                             <i class="fa-solid fa-briefcase"></i>
@@ -494,27 +521,27 @@
                     
                     <div class="space-y-6 border-l-2 border-stone-200 ml-4 pl-6 relative">
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">立法院黨團法案助理</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-amber-800 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">台北市議會研究室法案主任</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">行人零死亡推動聯盟 理事</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">金馬影展第四屆亞洲電影觀察團成員</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">鳴人堂、關鍵評論等平台 交通專欄作家</h4>
                         </div>
                         <div class="relative">
-                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-white"></div>
+                            <div class="absolute -left-[31px] top-1.5 w-4 h-4 rounded-full bg-stone-300 border-4 border-[#fdfbf7]"></div>
                             <h4 class="text-base font-bold text-stone-900">想想論壇等平台 電影專欄作家</h4>
                         </div>
                     </div>
@@ -524,45 +551,45 @@
     </section>
 
     <!-- 影音短講專區 (三欄 YouTube Shorts) -->
-    <section id="videos" class="py-12 bg-white border-y border-stone-200">
+    <section id="videos" class="py-16 bg-stone-100/60 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-8">
-                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-1">Video Insights</span>
+            <div class="text-center max-w-3xl mx-auto mb-12">
+                <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-1">VIDEO INSIGHTS</span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">影音短講專區</h2>
                 <p class="text-stone-600 mt-1 text-sm">觀看柏勛的政策短講、街頭觀察與改革理念。</p>
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center max-w-6xl mx-auto">
-                <div class="bg-[#fdfbf7] p-3 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
-                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/ylm3hBMNlfE" title="樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="bg-white p-4 rounded-3xl border border-stone-200 shadow-sm flex flex-col items-center">
+                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-2xl pt-[177.78%] shadow-md bg-stone-900">
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://www.youtube.com/embed/ylm3hBMNlfE" title="樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <h3 class="text-xs font-bold text-stone-900 mt-2.5 text-center px-1">樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？</h3>
+                    <h3 class="text-xs font-bold text-stone-900 mt-3 text-center px-1">樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？</h3>
                 </div>
 
-                <div class="bg-[#fdfbf7] p-3 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
-                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/8wgO2PesFB8" title="台灣藍鵲的家 沒有強制都更 祖厝前面狂炸" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="bg-white p-4 rounded-3xl border border-stone-200 shadow-sm flex flex-col items-center">
+                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-2xl pt-[177.78%] shadow-md bg-stone-900">
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://www.youtube.com/embed/8wgO2PesFB8" title="台灣藍鵲的家 沒有強制都更 祖厝前面狂炸" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <h3 class="text-xs font-bold text-stone-900 mt-2.5 text-center px-1">台灣藍鵲的家 沒有強制都更 祖厝前面狂炸</h3>
+                    <h3 class="text-xs font-bold text-stone-900 mt-3 text-center px-1">台灣藍鵲的家 沒有強制都更 祖厝前面狂炸</h3>
                 </div>
 
-                <div class="bg-[#fdfbf7] p-3 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
-                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
-                        <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/UKZ9Z1Apit8" title="守護交通安全與人本環境" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="bg-white p-4 rounded-3xl border border-stone-200 shadow-sm flex flex-col items-center">
+                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-2xl pt-[177.78%] shadow-md bg-stone-900">
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-2xl" src="https://www.youtube.com/embed/UKZ9Z1Apit8" title="守護交通安全與人本環境" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
-                    <h3 class="text-xs font-bold text-stone-900 mt-2.5 text-center px-1">守護交通安全與人本環境</h3>
+                    <h3 class="text-xs font-bold text-stone-900 mt-3 text-center px-1">守護交通安全與人本環境</h3>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- 專欄文章精選 -->
-    <section id="articles" class="py-12 bg-[#fdfbf7]">
+    <section id="articles" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
                 <div>
-                    <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-1">Column & Insights</span>
+                    <span class="text-amber-800 font-bold text-sm tracking-widest uppercase block mb-1">COLUMN & INSIGHTS</span>
                     <h2 class="text-2xl font-extrabold text-stone-900">專欄文章精選</h2>
                 </div>
                 <div class="mt-2 md:mt-0">
@@ -574,7 +601,7 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <article class="bg-white p-5 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
+                <article class="bg-[#fdfbf7] p-6 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
                     <div>
                         <span class="text-xs text-stone-500 font-medium block mb-1">風傳媒 ｜ 筆名：素樸勛</span>
                         <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">少年開明牌生猛又殘酷的城市童話《人性爆走課》</h3>
@@ -585,7 +612,7 @@
                     </a>
                 </article>
 
-                <article class="bg-white p-5 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
+                <article class="bg-[#fdfbf7] p-6 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
                     <div>
                         <span class="text-xs text-stone-500 font-medium block mb-1">關鍵評論網 ｜ 林柏勛</span>
                         <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">公車為什麼還不來（下）：台北市60億補助，是貴族與王室的共犯結構</h3>
@@ -596,7 +623,7 @@
                     </a>
                 </article>
 
-                <article class="bg-white p-5 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
+                <article class="bg-[#fdfbf7] p-6 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
                     <div>
                         <span class="text-xs text-stone-500 font-medium block mb-1">聯合報鳴人堂 ｜ 林柏勛</span>
                         <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">踢爆七條之一修法漏洞：教科書等級議事技巧，交通部騙過整個立法院？</h3>
@@ -616,75 +643,90 @@
             <div class="w-14 h-14 bg-amber-800 text-stone-100 rounded-2xl mx-auto flex items-center justify-center text-xl shadow-lg mb-4">
                 <i class="fa-solid fa-hand-holding-dollar"></i>
             </div>
-            <span class="text-amber-300 font-bold text-xs tracking-widest uppercase block mb-2">Support Us</span>
+            <span class="text-amber-300 font-bold text-xs tracking-widest uppercase block mb-2">SUPPORT US</span>
             <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-3">糧草助拳 我來拚 松山信義林柏勛</h2>
             <p class="text-stone-300 max-w-xl mx-auto mb-6 font-light text-sm">
                 改變台北需要你我一起拚！每一筆小額捐款，都是推動城市改革與透明政治的最強後盾。
             </p>
             <a href="https://geotian.oen.tw/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center space-x-3 bg-amber-800 hover:bg-amber-700 text-white font-bold px-7 py-3 rounded-xl shadow-xl transition-all text-base">
                 <i class="fa-solid fa-heart"></i>
-                <span>立即前往贊助頁面</span>
+                <span>立即前往政治獻金贊助頁面 ↗</span>
             </a>
         </div>
     </section>
 
-    <!-- 電子報訂閱 -->
-    <section id="newsletter" class="py-10 bg-gradient-to-br from-stone-950 to-amber-950 text-stone-100 relative overflow-hidden border-t border-stone-800">
+    <!-- 電子報訂閱專區 (已完整修復排版與區塊顯示) -->
+    <section id="newsletter" class="py-16 bg-gradient-to-br from-stone-950 to-amber-950 text-stone-100 relative overflow-hidden border-t border-stone-800">
         <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
-            <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight mb-1 text-center">免費訂閱柏勛政策評論</h2>
-            <p class="text-stone-300 max-w-md mx-auto mb-5 font-light text-center text-xs">
-                每月定期發送政策重點摘要與在地資訊，政策控的心頭好。
-            </p>
+            <div class="text-center mb-8">
+                <span class="text-amber-300 font-bold text-xs tracking-widest uppercase block mb-1">NEWSLETTER</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-2">免費訂閱柏勛政策評論</h2>
+                <p class="text-stone-300 max-w-md mx-auto font-light text-xs sm:text-sm">
+                    每月定期發送政策重點摘要與在地資訊，政策控的心頭好。
+                </p>
+            </div>
             
             <div class="w-full flex justify-center">
-                <div id="sub-form-container" class="w-full max-w-md">
-                    <div id="sub-form-content" class="w-full mx-auto shadow-xl !p-5 !min-h-[200px] bg-white rounded-2xl">
-                        <form
+                <div class="w-full max-w-md bg-white text-stone-900 rounded-3xl p-6 sm:p-8 shadow-2xl border-2 border-stone-800">
+                    
+                    <!-- 訂閱主表單 -->
+                    <form
                         action="https://api-backend.app.newsleopard.com/api/contacts/subscribe/40289a2aa0b785da01a0e43efd0020d0/verify"
                         method="POST"
                         target="popupwindow"
-                        onsubmit="return nl_1554802646254.subscribe()"
+                        onsubmit="return newsletterApp.subscribe()"
                         id="sub-form"
-                        class="content active"
-                        >
-                            <div class="head !mb-3">
-                                <h1 class="title text-stone-900 !text-lg font-bold">免費訂閱柏勛政策評論</h1>
-                            </div>
+                        class="form-panel active space-y-4"
+                    >
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">您的姓名</label>
                             <input
                                 id="sub-name"
-                                class="sub-inputs"
+                                class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm bg-stone-50"
                                 name="name"
-                                placeholder="輸入姓名"
+                                placeholder="請輸入姓名"
                                 required
                             />
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold text-stone-700 mb-1">電子信箱 (Email)</label>
                             <input
                                 type="email"
                                 id="sub-mail"
-                                class="sub-inputs"
+                                class="w-full px-4 py-3 rounded-xl border border-stone-300 focus:ring-2 focus:ring-amber-700 focus:outline-none text-sm bg-stone-50"
                                 name="email"
-                                placeholder="輸入 Email"
+                                placeholder="請輸入 Email"
                                 required
                             />
-                            <button id="sub-submit" class="btn w-full !py-2 !text-sm" type="submit">立即訂閱</button>
-                        </form>
-                        <div class="content confirm">
-                            <div class="head text-center py-4">
-                                <h1 class="title text-stone-900 font-bold text-base mb-1">訂閱服務確認</h1>
-                                <div class="description text-stone-600 text-xs">
-                                    已發送 Email 驗證信給你，請點擊信件連結以完成訂閱程序
-                                </div>
-                            </div>
                         </div>
-                        <div class="content err">
-                            <div class="head text-center py-4">
-                                <h1 class="title text-stone-900 font-bold text-base mb-1">訂閱失敗</h1>
-                                <div class="description text-stone-600 text-xs mb-3">暫時無法接受訂閱，請稍候重新嘗試</div>
-                                <button class="btn secondary px-5 py-1.5 text-xs" onclick="nl_1554802646254.retry()">
-                                    重試
-                                </button>
-                            </div>
+                        <button id="sub-submit" class="w-full bg-stone-900 hover:bg-stone-800 text-white font-bold py-3 px-6 rounded-xl shadow-md transition-all text-sm cursor-pointer mt-2" type="submit">
+                            立即訂閱政策評論
+                        </button>
+                    </form>
+
+                    <!-- 訂閱成功確認畫面 -->
+                    <div id="panel-confirm" class="form-panel text-center py-6 space-y-4">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-700 rounded-full flex items-center justify-center mx-auto text-xl">
+                            <i class="fa-solid fa-check"></i>
                         </div>
+                        <h3 class="text-lg font-bold text-stone-900">訂閱服務確認</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">
+                            已發送驗證信至您的信箱，請至信箱點擊驗證連結以完成訂閱程序！
+                        </p>
                     </div>
+
+                    <!-- 訂閱失敗重試畫面 -->
+                    <div id="panel-error" class="form-panel text-center py-6 space-y-4">
+                        <div class="w-12 h-12 bg-rose-100 text-rose-700 rounded-full flex items-center justify-center mx-auto text-xl">
+                            <i class="fa-solid fa-triangle-exclamation"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-stone-900">訂閱發生錯誤</h3>
+                        <p class="text-xs sm:text-sm text-stone-600 leading-relaxed">暫時無法接受訂閱，請稍候重新嘗試。</p>
+                        <button class="bg-stone-900 text-white px-6 py-2 rounded-xl text-xs font-bold hover:bg-stone-800 transition" onclick="newsletterApp.retry()">
+                            重新嘗試
+                        </button>
+                    </div>
+
                 </div>
             </div>
         </div>
@@ -707,35 +749,65 @@
         const canvas = document.getElementById('wheelCanvas');
         const ctx = canvas.getContext('2d');
         const spinBtn = document.getElementById('spin-btn');
-        const resultCard = document.getElementById('result-card');
+        const resultCard = document.createElement('div');
+        
+        // 建立結果彈窗
+        resultCard.id = 'result-card';
+        resultCard.className = 'fixed inset-0 bg-stone-950/70 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden';
+        resultCard.innerHTML = `
+            <div class="bg-white p-6 rounded-3xl border-4 border-stone-800 retro-shadow max-w-[340px] w-full flex flex-col items-center text-center animate-pop relative">
+                <div class="text-[11px] font-bold text-stone-400 uppercase mb-1">🎯 今日行人運勢解析：</div>
+                <div id="result-title" class="text-base font-black text-rose-600 mb-2">大吉 - 反攻大路順到家</div>
+                <p id="result-desc" class="text-xs font-medium text-stone-700 leading-relaxed bg-[#fdfbf7] p-3 rounded-2xl border-2 border-stone-300 mb-3 w-full">
+                    今天難得一路順暢！
+                </p>
+                <div class="w-[280px] h-[200px] bg-stone-100 border-2 border-stone-300 rounded-xl overflow-hidden mb-4 shadow-inner mx-auto flex items-center justify-center">
+                    <img id="result-img" src="" alt="運勢圖卡" class="w-full h-full object-cover" onerror="this.onerror=null; this.src='https://placehold.co/280x200/292524/fdfbf7?text=Fortune+Card';" />
+                </div>
+                <button id="close-card-btn" class="w-auto mx-auto bg-stone-900 hover:bg-stone-800 text-white font-black py-2 px-6 rounded-xl border-2 border-stone-800 text-xs cursor-pointer">
+                    知道了 👍
+                </button>
+            </div>
+        `;
+        document.body.appendChild(resultCard);
+
         const resultTitle = document.getElementById('result-title');
         const resultDesc = document.getElementById('result-desc');
         const resultImg = document.getElementById('result-img');
-        const closeCardBtn = document.getElementById('close-card-btn');
+        const closeCardBtn = resultCard.querySelector('#close-card-btn');
 
         const options = [
-            { name: "大吉", subtitle: "反攻大路順到家", desc: "今天難得一路順暢，但過斑馬線還是要眼觀四面、耳聽八方！", color: "#34d399", weight: 6, filename: "images/fortune_card_01_da_ji.png" },
-            { name: "兇", subtitle: "走路要看路 遇車退三步", desc: "出門極易踩到人行道破洞或撞上巨大變電箱，請把靈魂找回來。", color: "#f87171", weight: 8, filename: "images/fortune_card_02_xiong.png" },
-            { name: "小吉", subtitle: "全部給我跑起來", desc: "人行道被機車和攤販塞滿了，今天只能靠閃躲技能一路小跑步通關。", color: "#fbbf24", weight: 8, filename: "images/fortune_card_03_xiao_ji.png" },
-            { name: "中吉", subtitle: "希望有人行道可以走", desc: "走著走著人行道突然消失要被迫走進車道，祈禱行人路權今天對你微笑。", color: "#60a5fa", weight: 8, filename: "images/fortune_card_04_zhong_ji.png" },
-            { name: "大凶", subtitle: "步步危機 要小心", desc: "出門必踢到路霸盆栽，走路請務必攜帶雷達探測器！", color: "#e11d48", weight: 5, filename: "images/fortune_card_05_da_xiong.png" },
-            { name: "劫運", subtitle: "錢包與路權的雙重劫難", desc: "走在人行道突然被違規汽車驚嚇，失膽又驚心。", color: "#c084fc", weight: 5, filename: "images/fortune_card_06_jie_yun.png" },
-            { name: "食運", subtitle: "一路吃美食與閃避", desc: "雖然人行道被小吃攤佔滿寸步難行，但也一路聞到碳烤雞排香氣。", color: "#fb923c", weight: 6, filename: "images/fortune_card_07_shi_shang.png" },
-            { name: "財運", subtitle: "地上撿到發票", desc: "今天財運奇佳，成功閃過違規停車陷阱，還在騎樓角落順利通行！", color: "#facc15", weight: 5, filename: "images/fortune_card_08_cai_yun.png" },
-            { name: "官運", subtitle: "遇到警察伯伯指揮", desc: "人行道違規停車全被開單！行人路權大獲全勝，走路威風凜凜。", color: "#38bdf8", weight: 4, filename: "images/fortune_card_09_guan_yun.png" },
-            { name: "印運", subtitle: "長輩庇佑與提醒", desc: "路邊阿嬤看你走得辛苦，好心提醒前面有坑洞，獲得滿滿溫暖。", color: "#f472b6", weight: 6, filename: "images/fortune_card_10_yin_yun.png" },
-            { name: "臭肚臍", subtitle: "莫名其妙被念", desc: "走在路上莫名其妙被路人行注目禮，今天運氣有點荒謬。", color: "#a78bfa", weight: 6, filename: "images/fortune_card_11_chou_du_qi.png" },
-            { name: "倒楣鬼", subtitle: "水逆大發作", desc: "連踩兩個水漥，鞋子全濕，今天諸事不宜請早點回家。", color: "#64748b", weight: 6, filename: "images/fortune_card_12_dao_mei.png" },
-            { name: "加班", subtitle: "逃不掉的命運", desc: "本想準時下班，人行道卻塞車塞到天荒地老，直接加班到深夜。", color: "#f97316", weight: 7, filename: "images/fortune_card_13_jia_ban.png" },
-            { name: "掃把星", subtitle: "路障磁鐵", desc: "所有路邊違規招牌和障礙物今天好像都在對你招手。", color: "#ef4444", weight: 5, filename: "images/fortune_card_14_sao_ba.png" },
-            { name: "邱比特", subtitle: "街角浪漫相遇", desc: "在閃避機車的狼狽瞬間，竟然遇見了同樣在閃避的命運之人？", color: "#fb7185", weight: 4, filename: "images/fortune_card_15_qiu_bi_te.png" },
-            { name: "烏鴉嘴", subtitle: "說什麼中什麼", desc: "才剛說「今天應該不會下雨」，天空馬上就雷雨交加。", color: "#94a3b8", weight: 6, filename: "images/fortune_card_16_wu_ya.png" },
-            { name: "小福氣", subtitle: "順利買到最後一份雞排", desc: "雖然人行道難走，但轉角小攤販剛好剩最後一份炸雞排！", color: "#34d399", weight: 6, filename: "images/fortune_card_17_xiao_fu.png" },
-            { name: "大幸運", subtitle: "一路綠燈暢行無阻", desc: "行人地獄今天關閉！所有紅綠燈完美配合，一路暢行無阻！", color: "#22c55e", weight: 4, filename: "images/fortune_card_18_da_xing_yun.png" },
-            { name: "撿到貓", subtitle: "吸貓治癒一切", desc: "在人行道角落意外吸到一隻賓士浪貓，瞬間心情大好！", color: "#f43f5e", weight: 5, filename: "images/fortune_card_19_jian_dao_mao.png" },
-            { name: "馬英九", subtitle: "還路於民還我牛", desc: "走在路上突然想起怪怪的，感覺馬路好像在跟你握手。", color: "#3b82f6", weight: 4, filename: "images/fortune_card_20_ma_ying_jiu.png" },
-            { name: "陳水扁", subtitle: "勇往直前迪迪龍", desc: "阿扁臭了嗎，不管前方多少違停阻擋，都要精神抖手。", color: "#10b981", weight: 4, filename: "images/fortune_card_21_chen_shui_bian.png" }
+            { name: "大吉", subtitle: "反攻大路順到家", desc: "今天難得一路順暢，但過斑馬線還是要眼觀四面、耳聽八方！", color: "#34d399", weight: 6, filename: "fortune_card_01_da_ji.png" },
+            { name: "兇", subtitle: "走路要看路 遇車退三步", desc: "出門極易踩到人行道破洞或撞上巨大變電箱，請把靈魂找回來。", color: "#f87171", weight: 8, filename: "fortune_card_02_xiong.png" },
+            { name: "小吉", subtitle: "全部給我跑起來", desc: "人行道被機車和攤販塞滿了，今天只能靠閃躲技能一路小跑步通關。", color: "#fbbf24", weight: 8, filename: "fortune_card_03_xiao_ji.png" },
+            { name: "中吉", subtitle: "希望有人行道可以走", desc: "走著走著人行道突然消失要被迫走進車道，祈禱行人路權今天對你微笑。", color: "#60a5fa", weight: 8, filename: "fortune_card_04_zhong_ji.png" },
+            { name: "大凶", subtitle: "步步危機 要小心", desc: "出門必踢到路霸盆栽，走路請務必攜帶雷達探測器！", color: "#e11d48", weight: 5, filename: "fortune_card_05_da_xiong.png" },
+            { name: "劫運", subtitle: "錢包與路權的雙重劫難", desc: "走在人行道突然被違規汽車驚嚇，失膽又驚心。", color: "#c084fc", weight: 5, filename: "fortune_card_06_jie_yun.png" },
+            { name: "食運", subtitle: "一路吃美食與閃避", desc: "雖然人行道被小吃攤佔滿寸步難行，但也一路聞到碳烤雞排香氣。", color: "#fb923c", weight: 6, filename: "fortune_card_07_shi_shang.png" },
+            { name: "財運", subtitle: "地上撿到發票", desc: "今天財運奇佳，成功閃過違規停車陷阱，還在騎樓角落順利通行！", color: "#facc15", weight: 5, filename: "fortune_card_08_cai_yun.png" },
+            { name: "官運", subtitle: "遇到警察伯伯指揮", desc: "人行道違規停車全被開單！行人路權大獲全勝，走路威風凜凜。", color: "#38bdf8", weight: 4, filename: "fortune_card_09_guan_yun.png" },
+            { name: "印運", subtitle: "長輩庇佑與提醒", desc: "路邊阿嬤看你走得辛苦，好心提醒前面有坑洞，獲得滿滿溫暖。", color: "#f472b6", weight: 6, filename: "fortune_card_10_yin_yun.png" },
+            { name: "臭肚臍", subtitle: "莫名其妙被念", desc: "走在路上莫名其妙被路人行注目禮，今天運氣有點荒謬。", color: "#a78bfa", weight: 6, filename: "fortune_card_11_chou_du_qi.png" },
+            { name: "倒楣鬼", subtitle: "水逆大發作", desc: "連踩兩個水漥，鞋子全濕，今天諸事不宜請早點回家。", color: "#64748b", weight: 6, filename: "fortune_card_12_dao_mei.png" },
+            { name: "加班", subtitle: "逃不掉的命運", desc: "本想準時下班，人行道卻塞車塞到天荒地老，直接加班到深夜。", color: "#f97316", weight: 7, filename: "fortune_card_13_jia_ban.png" },
+            { name: "掃把星", subtitle: "路障磁鐵", desc: "所有路邊違規招牌和障礙物今天好像都在對你招手。", color: "#ef4444", weight: 5, filename: "fortune_card_14_sao_ba.png" },
+            { name: "邱比特", subtitle: "街角浪漫相遇", desc: "在閃避機車的狼狽瞬間，竟然遇見了同樣在閃避的命運之人？", color: "#fb7185", weight: 4, filename: "fortune_card_15_qiu_bi_te.png" },
+            { name: "烏鴉嘴", subtitle: "說什麼中什麼", desc: "才剛說「今天應該不會下雨」，天空馬上就雷雨交加。", color: "#94a3b8", weight: 6, filename: "fortune_card_16_wu_ya.png" },
+            { name: "小福氣", subtitle: "順利買到最後一份雞排", desc: "雖然人行道難走，但轉角小攤販剛好剩最後一份炸雞排！", color: "#34d399", weight: 6, filename: "fortune_card_17_xiao_fu.png" },
+            { name: "大幸運", subtitle: "一路綠燈暢行無阻", desc: "行人地獄今天關閉！所有紅綠燈完美配合，一路暢行無阻！", color: "#22c55e", weight: 4, filename: "fortune_card_18_da_xing_yun.png" },
+            { name: "撿到貓", subtitle: "吸貓治癒一切", desc: "在人行道角落意外吸到一隻賓士浪貓，瞬間心情大好！", color: "#f43f5e", weight: 5, filename: "fortune_card_19_jian_dao_mao.png" },
+            { name: "馬英九", subtitle: "還路於民還我牛", desc: "走在路上突然想起怪怪的，感覺馬路好像在跟你握手。", color: "#3b82f6", weight: 4, filename: "fortune_card_20_ma_ying_jiu.png" },
+            { name: "陳水扁", subtitle: "勇往直前迪迪龍", desc: "阿扁臭了嗎，不管前方多少違停阻擋，都要精神抖手。", color: "#10b981", weight: 4, filename: "fortune_card_21_chen_shui_bian.png" }
         ];
+
+        // 圖片預載入機制
+        function preloadImages() {
+            options.forEach(opt => {
+                const img = new Image();
+                img.src = `images/${opt.filename}`;
+            });
+        }
+        window.addEventListener('load', preloadImages);
 
         let currentAngle = 0;
         let isSpinning = false;
@@ -858,14 +930,16 @@
                 } else {
                     currentAngle = targetAngle;
                     drawWheel(currentAngle);
+
                     isSpinning = false;
                     spinBtn.disabled = false;
                     spinBtn.classList.remove('opacity-50', 'cursor-not-allowed');
 
                     const winningOption = options[winningSector];
+
                     resultTitle.innerText = `${winningOption.name} - ${winningOption.subtitle}`;
                     resultDesc.innerText = winningOption.desc;
-                    resultImg.src = winningOption.filename;
+                    resultImg.src = `images/${winningOption.filename}`;
                     resultCard.classList.remove('hidden');
 
                     confetti({
@@ -884,12 +958,12 @@
 
         setTimeout(resizeCanvas, 50);
 
-        var nl_1554802646254 = (function subIIFE() {
-            function showConfirm() {
-                var confirmEl = document.querySelector('.content.confirm');
-                var formEl = document.querySelector('form#sub-form');
-                if (confirmEl) confirmEl.className = 'content confirm active';
-                if (formEl) formEl.className = 'content';
+        // 訂閱表單互動處理
+        var newsletterApp = (function() {
+            function switchPanel(panelId) {
+                document.querySelectorAll('.form-panel').forEach(p => p.classList.remove('active'));
+                const target = document.getElementById(panelId);
+                if (target) target.classList.add('active');
             }
 
             return {
@@ -901,16 +975,13 @@
                     var xhr = new XMLHttpRequest();
                     xhr.open('POST', 'https://api-backend.app.newsleopard.com/api/contacts/subscribe/40289a2aa0b785da01a0e43efd0020d0/verify', true);
                     xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                    xhr.onload = function() { showConfirm(); };
-                    xhr.onerror = function() { showConfirm(); };
+                    xhr.onload = function() { switchPanel('panel-confirm'); };
+                    xhr.onerror = function() { switchPanel('panel-confirm'); };
                     xhr.send('name=' + encodeURIComponent(nameInput) + '&email=' + encodeURIComponent(emailInput));
                     return false;
                 },
                 retry: function() {
-                    var formEl = document.querySelector('form#sub-form');
-                    var errEl = document.querySelector('.content.err');
-                    if (formEl) formEl.className = 'content active';
-                    if (errEl) formEl.className = 'content err';
+                    switchPanel('sub-form');
                 }
             };
         })();
