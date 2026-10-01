@@ -3,66 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>林柏勛議員候選人 | 台北市松山信義第三選區</title>
+    <title>林柏勛 ｜ 台北市松山信義區議員候選人</title>
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
                     colors: {
-                        primary: '#78350f',
-                        earth: {
+                        stone: {
                             50: '#fdfbf7',
                             100: '#f5eee6',
                             200: '#e8d9cc',
-                            600: '#92400e',
-                            700: '#78350f',
+                            800: '#78350f',
                             900: '#451a03',
+                            950: '#292524',
                         }
                     }
                 }
             }
         }
     </script>
+    <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
-    <!-- Canvas Confetti CDN -->
+    <!-- Google Fonts Noto Sans TC -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Canvas Confetti for winning celebration -->
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
     <style>
         body { font-family: 'Noto Sans TC', sans-serif; background-color: #fdfbf7; color: #292524; }
-        .game-font { font-family: 'Zen Maru Gothic', sans-serif; }
-        .retro-shadow { box-shadow: 4px 4px 0px #451a03; }
-        .retro-shadow-sm { box-shadow: 2px 2px 0px #451a03; }
-        .sub-inputs {
-            width: 100%;
-            padding: 0.75rem 1rem;
-            margin-bottom: 0.75rem;
-            border: 1px solid #d6c7b2;
-            border-radius: 0.75rem;
-            font-size: 0.875rem;
-            outline: none;
-            transition: all 0.2s;
-            background-color: #fff;
+        .retro-shadow { box-shadow: 6px 6px 0px #451a03; }
+        @keyframes popIn {
+            0% { transform: scale(0.8); opacity: 0; }
+            100% { transform: scale(1); opacity: 1; }
         }
-        .sub-inputs:focus {
-            border-color: #78350f;
-            box-shadow: 0 0 0 2px rgba(120, 53, 15, 0.1);
-        }
-        .btn {
-            background-color: #78350f;
-            color: white;
-            font-weight: 700;
-            border-radius: 0.75rem;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-        .btn:hover { background-color: #92400e; }
-        #sub-form-content .content { display: none; }
-        #sub-form-content .content.active { display: block; }
+        .animate-pop { animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
     </style>
 </head>
-<body class="bg-[#fdfbf7] text-[#292524] antialiased selection:bg-amber-700 selection:text-white">
+<body class="bg-[#fdfbf7] text-[#292524] antialiased selection:bg-amber-800 selection:text-white">
 
+    <!-- 頂部導覽列 -->
     <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md border-b border-stone-200 shadow-sm">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
@@ -112,6 +92,7 @@
         </div>
     </header>
 
+    <!-- 英雄視覺區塊 (Hero Section) -->
     <section class="relative bg-gradient-to-br from-stone-900 via-stone-800 to-amber-950 text-stone-100 py-16 md:py-24 overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d6c7b2_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -136,11 +117,11 @@
                         </a>
                     </div>
                 </div>
+                <!-- 英雄照片區 (維持完整大器高度 h-[480px] sm:h-[560px]) -->
                 <div class="lg:col-span-5 flex justify-center">
                     <div class="relative w-full max-w-sm">
                         <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-700 to-stone-600 rounded-3xl blur opacity-30"></div>
                         <div class="relative bg-stone-900 rounded-3xl p-3 border border-stone-800 shadow-2xl">
-                            <!-- 加長上下空間的直式人像框 (h-[480px] sm:h-[560px]) -->
                             <img 
                                 src="images/profile.jpg" 
                                 onerror="this.onerror=null; this.src='https://placehold.co/800x1100/292524/fdfbf7?text=Teddy+Lin';" 
@@ -158,6 +139,7 @@
         </div>
     </section>
 
+    <!-- 過往政績與監督實錄 -->
     <section id="achievements" class="py-20 bg-[#fdfbf7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -340,6 +322,7 @@
         </div>
     </section>
 
+    <!-- 三大核心政見 -->
     <section id="policies" class="py-16 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-12">
@@ -359,7 +342,7 @@
                         <ul class="text-stone-600 text-sm space-y-4">
                             <li><strong>防災籌備：</strong>落實水災、旱災、核災、戰爭的校園教育和公共環境，無恃其不來，恃吾有以待也。</li>
                             <li><strong>韌性城市：</strong>公共空間落實城市水撲滿，拒絕水泥時尚的空間思維，推動「河道再現」，打造民生社區富民到三民的生態綠帶。</li>
-                            <li><strong>成癮門診：</strong>延續柏勛過往政績，強化「博弈成癮防治門診」，從醫療與心理層面協助市民遠離成癮，重返社會。</li>
+                            <li><strong>成癮門診：</strong> 延續柏勛過往政績，強化「博弈成癮防治門診」，從醫療與心理層面協助市民遠離成癮，重返社會。</li>
                         </ul>
                     </div>
                 </div>
@@ -373,7 +356,7 @@
                         </div>
                         <ul class="text-stone-600 text-sm space-y-4">
                             <li><strong>交通正義：</strong>人行、車行空間合理配置，社區老巷人行道拓寬，兒童長輩娃娃車，出入安全都升級。</li>
-                            <li><strong>自行車塔：</strong>交通節點設自行車塔，並整合校園與公共運輸站點優先試辦，如北車,松車站體之內，實現騎乘自行車站內直接下車、無縫轉乘的綠色運輸。</li>
+                            <li><strong>自行車塔：</strong> 交通節點設自行車塔，並整合校園與公共運輸站點優先試辦，如北車、松車站體之內，實現騎乘自行車站內直接下車、無縫轉乘的綠色運輸。</li>
                             <li><strong>公運優化：</strong>增加松山、信義南北向公車路線，提升公車服務品質，在此之前要先提升駕駛員勞動環境，不急煞、不猛開，讓市民安心搭乘。</li>
                         </ul>
                     </div>
@@ -387,9 +370,9 @@
                             <h3 class="text-xl font-bold text-stone-900">體制改革<br><span class="text-xs text-stone-500 font-normal">打破權錢壟斷，落實透明政治</span></h3>
                         </div>
                         <ul class="text-stone-600 text-sm space-y-4">
-                            <li><strong>里政升級：</strong>提升里長職能與預算參與權，成為複數選區的「區議員」。亦推動直轄市區長民選，賦予區域自主發展權。</li>
-                            <li><strong>協商公開：</strong>比照立法院，台北市議會政黨協商全程直播，杜絕密室黑箱，拒絕權錢交換零成本。</li>
-                            <li><strong>關說透明：</strong>關說必須登記並留存紀錄，接受公民檢視。如因為行政原因不能公開者，亦須訂定解密年限。</li>
+                            <li><strong>里政升級：</strong> 提升里長職能與預算參與權，成為複數選區的「區議員」。亦推動直轄市區長民選，賦予區域自主發展權。</li>
+                            <li><strong>協商公開：</strong> 比照立法院，台北市議會政黨協商全程直播，杜絕密室黑箱，拒絕權錢交換零成本。</li>
+                            <li><strong>關說透明：</strong> 關說必須登記並留存紀錄，接受公民檢視。如因為行政原因不能公開者，亦須訂定解密年限。</li>
                         </ul>
                     </div>
                 </div>
@@ -397,17 +380,16 @@
         </div>
     </section>
 
+    <!-- 互動輪盤遊戲專區 -->
     <section id="game" class="py-16 bg-[#f5eee6] border-y border-stone-200">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
             <div class="text-center mb-8">
                 <span class="text-amber-800 font-bold text-xs tracking-widest uppercase block mb-2">INTERACTIVE GAME</span>
-                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900 game-font">台北人行道今日運勢預測</h2>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">台北人行道今日運勢預測</h2>
                 <p class="text-stone-600 mt-2 text-xs sm:text-sm font-medium">點擊轉動轉盤，看看你今天在台北街頭能抽到什麼運勢！</p>
             </div>
 
-            <!-- Game Container -->
             <div class="w-full max-w-sm flex flex-col items-center bg-white p-5 rounded-3xl border-3 border-stone-800 shadow-xl">
-                <!-- Wheel Canvas Container (1:1 Square) -->
                 <div class="relative w-64 h-64 sm:w-72 sm:h-72 my-2 flex items-center justify-center aspect-square">
                     <div class="absolute right-[-10px] top-1/2 -translate-y-1/2 z-30 w-0 h-0 border-t-[10px] border-t-transparent border-b-[10px] border-b-transparent border-r-[20px] border-rose-500 drop-shadow-md"></div>
                     
@@ -434,16 +416,16 @@
                 </div>
             </div>
 
-            <!-- Result Modal Popup with 280x200 image asset loading from images/ -->
+            <!-- 抽獎結果圖卡彈窗 (讀取 images/ 資料夾下的精確圖檔) -->
             <div id="result-card" class="fixed inset-0 bg-stone-950/60 backdrop-blur-xs flex items-center justify-center p-4 z-50 hidden">
-                <div class="bg-white p-6 rounded-3xl border-4 border-stone-800 retro-shadow max-w-[340px] w-full flex flex-col items-center text-center relative">
+                <div class="bg-white p-6 rounded-3xl border-4 border-stone-800 retro-shadow max-w-[340px] w-full flex flex-col items-center text-center relative animate-pop">
                     <div class="text-[11px] font-bold text-stone-400 uppercase mb-1">🎯 今日行人運勢解析：</div>
-                    <div id="result-title" class="text-base font-black text-amber-800 mb-2 game-font">大吉 - 反攻大路順到家</div>
+                    <div id="result-title" class="text-base font-black text-amber-800 mb-2">大吉 - 反攻大路順到家</div>
                     <p id="result-desc" class="text-xs font-medium text-stone-700 leading-relaxed bg-[#fdfbf7] p-3 rounded-2xl border-2 border-stone-300 mb-3 w-full">
                         今天一路順暢！
                     </p>
                     
-                    <!-- 280x200 Image Asset Container Loading from images/ with exact filenames -->
+                    <!-- 圖片展示框 (讀取 images/ 資料夾下的對應圖檔) -->
                     <div class="w-[280px] h-[200px] bg-stone-100 border-2 border-stone-300 rounded-lg overflow-hidden flex items-center justify-center mb-4 shadow-inner mx-auto">
                         <img id="result-img" src="" alt="運勢圖卡" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/280x200/292524/fdfbf7?text=Fortune+Card';" />
                     </div>
@@ -456,6 +438,7 @@
         </div>
     </section>
 
+    <!-- 學經歷專區 -->
     <section id="experience" class="py-20 bg-[#fdfbf7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16">
@@ -465,7 +448,6 @@
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <!-- 學歷背景 -->
                 <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
                     <div class="flex items-center space-x-3 mb-8">
                         <div class="w-10 h-10 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center font-bold">
@@ -502,7 +484,6 @@
                     </div>
                 </div>
 
-                <!-- 社會與專業經歷 -->
                 <div class="bg-white rounded-3xl p-8 border border-stone-200 shadow-sm">
                     <div class="flex items-center space-x-3 mb-8">
                         <div class="w-10 h-10 bg-amber-50 text-amber-800 rounded-xl flex items-center justify-center font-bold">
@@ -542,6 +523,7 @@
         </div>
     </section>
 
+    <!-- 影音短講專區 (三欄 YouTube Shorts) -->
     <section id="videos" class="py-12 bg-white border-y border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-8">
@@ -551,47 +533,23 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-center max-w-6xl mx-auto">
-                <!-- Shorts 1 -->
                 <div class="bg-[#fdfbf7] p-3 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
                     <div class="relative w-full max-w-[260px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full rounded-xl" 
-                            src="https://www.youtube.com/embed/8wgO2PesFB8" 
-                            title="台灣藍鵲的家 沒有強制都更 祖厝前面狂炸" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/ylm3hBMNlfE" title="樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <h3 class="text-xs font-bold text-stone-900 mt-2.5 text-center px-1">樹根灌水泥 等於慢性毀掉半條命 如何打造城市的綠？</h3>
+                </div>
+
+                <div class="bg-[#fdfbf7] p-3 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
+                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/8wgO2PesFB8" title="台灣藍鵲的家 沒有強制都更 祖厝前面狂炸" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <h3 class="text-xs font-bold text-stone-900 mt-2.5 text-center px-1">台灣藍鵲的家 沒有強制都更 祖厝前面狂炸</h3>
                 </div>
 
-                <!-- Shorts 2 -->
                 <div class="bg-[#fdfbf7] p-3 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
                     <div class="relative w-full max-w-[260px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full rounded-xl" 
-                            src="https://www.youtube.com/embed/4vjT6sEkiK4" 
-                            title="交通與城市改革政策短講" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
-                    </div>
-                    <h3 class="text-xs font-bold text-stone-900 mt-2.5 text-center px-1">交通與城市改革政策短講</h3>
-                </div>
-
-                <!-- Shorts 3 -->
-                <div class="bg-[#fdfbf7] p-3 rounded-2xl border border-stone-200 shadow-sm flex flex-col items-center">
-                    <div class="relative w-full max-w-[260px] overflow-hidden rounded-xl pt-[177.78%] shadow-md bg-stone-900">
-                        <iframe 
-                            class="absolute top-0 left-0 w-full h-full rounded-xl" 
-                            src="https://www.youtube.com/embed/UKZ9Z1Apit8" 
-                            title="守護交通安全與人本環境" 
-                            frameborder="0" 
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                            allowfullscreen>
-                        </iframe>
+                        <iframe class="absolute top-0 left-0 w-full h-full rounded-xl" src="https://www.youtube.com/embed/UKZ9Z1Apit8" title="守護交通安全與人本環境" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                     <h3 class="text-xs font-bold text-stone-900 mt-2.5 text-center px-1">守護交通安全與人本環境</h3>
                 </div>
@@ -599,6 +557,7 @@
         </div>
     </section>
 
+    <!-- 專欄文章精選 -->
     <section id="articles" class="py-12 bg-[#fdfbf7]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-col md:flex-row md:items-end justify-between mb-8">
@@ -618,9 +577,7 @@
                 <article class="bg-white p-5 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
                     <div>
                         <span class="text-xs text-stone-500 font-medium block mb-1">風傳媒 ｜ 筆名：素樸勛</span>
-                        <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">
-                            少年開明牌生猛又殘酷的城市童話《人性爆走課》
-                        </h3>
+                        <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">少年開明牌生猛又殘酷的城市童話《人性爆走課》</h3>
                     </div>
                     <a href="https://www.storm.mg/article/3329922" target="_blank" rel="noopener noreferrer" class="text-amber-800 font-bold text-xs hover:underline inline-flex items-center space-x-1 mt-3">
                         <span>閱讀文章</span>
@@ -631,9 +588,7 @@
                 <article class="bg-white p-5 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
                     <div>
                         <span class="text-xs text-stone-500 font-medium block mb-1">關鍵評論網 ｜ 林柏勛</span>
-                        <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">
-                            公車為什麼還不來（下）：台北市60億補助，是貴族與王室的共犯結構
-                        </h3>
+                        <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">公車為什麼還不來（下）：台北市60億補助，是貴族與王室的共犯結構</h3>
                     </div>
                     <a href="https://www.thenewslens.com/article/201822" target="_blank" rel="noopener noreferrer" class="text-amber-800 font-bold text-xs hover:underline inline-flex items-center space-x-1 mt-3">
                         <span>閱讀文章</span>
@@ -644,9 +599,7 @@
                 <article class="bg-white p-5 rounded-2xl border border-stone-200 hover:shadow-sm transition-all flex flex-col justify-between">
                     <div>
                         <span class="text-xs text-stone-500 font-medium block mb-1">聯合報鳴人堂 ｜ 林柏勛</span>
-                        <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">
-                            踢爆七條之一修法漏洞：教科書等級議事技巧，交通部騙過整個立法院？
-                        </h3>
+                        <h3 class="text-sm font-bold text-stone-900 hover:text-amber-800 transition-colors mb-2 leading-snug">踢爆七條之一修法漏洞：教科書等級議事技巧，交通部騙過整個立法院？</h3>
                     </div>
                     <a href="https://opinion.udn.com/opinion/story/122577/6150880" target="_blank" rel="noopener noreferrer" class="text-amber-800 font-bold text-xs hover:underline inline-flex items-center space-x-1 mt-3">
                         <span>閱讀文章</span>
@@ -657,6 +610,7 @@
         </div>
     </section>
 
+    <!-- 糧草助拳贊助專區 -->
     <section id="donate" class="py-16 bg-stone-900 text-stone-100 relative overflow-hidden">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
             <div class="w-14 h-14 bg-amber-800 text-stone-100 rounded-2xl mx-auto flex items-center justify-center text-xl shadow-lg mb-4">
@@ -674,6 +628,7 @@
         </div>
     </section>
 
+    <!-- 電子報訂閱 -->
     <section id="newsletter" class="py-10 bg-gradient-to-br from-stone-950 to-amber-950 text-stone-100 relative overflow-hidden border-t border-stone-800">
         <div class="max-w-2xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center">
             <h2 class="text-xl sm:text-2xl font-extrabold tracking-tight mb-1 text-center">免費訂閱柏勛政策評論</h2>
@@ -735,6 +690,7 @@
         </div>
     </section>
 
+    <!-- 頁尾 -->
     <footer class="bg-stone-950 text-stone-400 py-6 border-t border-stone-800 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-1">
             <div class="flex items-center justify-center space-x-2 text-stone-100 font-bold text-sm">
@@ -746,6 +702,7 @@
         </div>
     </footer>
 
+    <!-- 輪盤與訂閱互動 JavaScript -->
     <script>
         const canvas = document.getElementById('wheelCanvas');
         const ctx = canvas.getContext('2d');
@@ -828,7 +785,7 @@
                 ctx.textAlign = 'right';
                 ctx.textBaseline = 'middle';
                 ctx.fillStyle = '#451a03';
-                ctx.font = 'bold 11px "Zen Maru Gothic", sans-serif';
+                ctx.font = 'bold 11px sans-serif';
                 ctx.fillText(opt.name, radius - 16, 0);
                 ctx.restore();
             });
