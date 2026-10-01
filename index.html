@@ -403,12 +403,13 @@
     </section>
 
 <!-- 街頭運勢轉盤遊戲專區 (左右兩側配置示意圖卡) -->
-    <section id="wheel-section" class="py-10 bg-stone-100/60 border-t border-stone-200">
+    <section id="wheel-section" class="py-6 bg-stone-100/60 border-t border-stone-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center max-w-3xl mx-auto mb-6">
-                <span class="text-amber-800 font-bold text-xs tracking-widest uppercase block mb-1">INTERACTIVE GAME</span>
+            <!-- 縮小標題下方的間距 (mb-4) -->
+            <div class="text-center max-w-3xl mx-auto mb-4">
+                <span class="text-amber-800 font-bold text-xs tracking-widest uppercase block mb-0.5">INTERACTIVE GAME</span>
                 <h2 class="text-2xl sm:text-3xl font-extrabold text-stone-900">台北人行道今日運勢預測</h2>
-                <p class="text-stone-600 mt-1 text-sm">點擊轉動轉盤，看看你今天在台北街頭能抽到什麼運勢！</p>
+                <p class="text-stone-600 mt-0.5 text-xs sm:text-sm">點擊轉動轉盤，看看你今天在台北街頭能抽到什麼運勢！</p>
             </div>
 
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center justify-center max-w-5xl mx-auto">
@@ -424,8 +425,8 @@
 
                 <!-- 中間轉盤主體 -->
                 <div class="col-span-1 lg:col-span-6 flex flex-col items-center">
-                    <div class="w-full max-w-xs flex flex-col items-center bg-white p-5 rounded-3xl border-3 border-stone-800 retro-shadow">
-                        <div class="relative w-56 h-56 sm:w-64 sm:h-64 my-1 flex items-center justify-center aspect-square">
+                    <div class="w-full max-w-xs flex flex-col items-center bg-white p-4 rounded-3xl border-3 border-stone-800 retro-shadow">
+                        <div class="relative w-52 h-52 sm:w-60 sm:h-60 my-0.5 flex items-center justify-center aspect-square">
                             <div class="absolute right-[-8px] top-1/2 -translate-y-1/2 z-30 w-0 h-0 border-t-[8px] border-t-transparent border-b-[8px] border-b-transparent border-r-[16px] border-rose-500 drop-shadow-md"></div>
                             
                             <div class="w-full h-full rounded-full border-4 border-stone-800 retro-shadow overflow-hidden bg-white relative aspect-square">
@@ -444,8 +445,8 @@
                             </div>
                         </div>
 
-                        <div class="w-full mt-4">
-                            <button id="spin-btn" class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white font-black py-3 px-4 rounded-xl border-2 border-stone-800 retro-shadow transition transform active:translate-y-1 text-sm flex items-center justify-center space-x-2 cursor-pointer">
+                        <div class="w-full mt-3">
+                            <button id="spin-btn" class="w-full bg-amber-700 hover:bg-amber-600 active:bg-amber-800 text-white font-black py-2.5 px-4 rounded-xl border-2 border-stone-800 retro-shadow transition transform active:translate-y-1 text-sm flex items-center justify-center space-x-2 cursor-pointer">
                                 <span>開始抽運勢 🎲</span>
                             </button>
                         </div>
@@ -464,7 +465,7 @@
             </div>
         </div>
     </section>
-
+    
     <!-- 學經歷專區 -->
     <section id="experience" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
