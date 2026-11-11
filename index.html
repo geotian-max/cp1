@@ -3,7 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>林柏勛 ｜ 台北市松山信義區議員候選人</title>
+    <title>13號林柏勛｜台北市松山信義區議員候選人</title>
+    <link rel="canonical" href="https://www.teddy4tpe.tw/">
+    <meta name="description" content="13號林柏勛，台北市松山信義第三選區議員候選人。倡議交通改革與行人安全，讓人行、車行空間更合理，出入更平安。">
+    <meta property="og:title" content="13號林柏勛｜台北市松山信義區議員候選人">
+    <meta property="og:description" content="13號林柏勛，台北市松山信義第三選區議員候選人。倡議交通改革與行人安全，讓人行、車行空間更合理，出入更平安。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.teddy4tpe.tw/">
+    <meta property="og:locale" content="zh_TW">
+    <meta property="og:image" content="https://www.teddy4tpe.tw/images/og-share.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="13號林柏勛｜台北市松山信義區議員候選人">
+    <meta name="twitter:description" content="13號林柏勛，台北市松山信義第三選區議員候選人。倡議交通改革與行人安全，讓人行、車行空間更合理，出入更平安。">
+    <meta name="twitter:image" content="https://www.teddy4tpe.tw/images/og-share.jpg">
+    <link rel="icon" href="favicon.ico" sizes="any">
+    <link rel="icon" href="images/favicon-32.png" type="image/png" sizes="32x32">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -40,6 +58,16 @@
         .animate-pop { animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards; }
         .form-panel { display: none; }
         .form-panel.active { display: block; }
+        /* 號次圓標跟著照片寬度縮放，位置對齊形象照左上空白處 */
+        .candidate-badge-anchor { container-type: inline-size; }
+        .candidate-badge {
+            left: clamp(4px, 1cqw, 8px);
+            top: clamp(1.25rem, 9.3cqw, 3.25rem);
+            width: 35%;
+            container-type: inline-size;
+        }
+        .candidate-badge-label { font-size: 13cqw; }
+        .candidate-badge-num { font-size: 46cqw; }
     </style>
 </head>
 <body class="bg-[#fdfbf7] text-[#292524] antialiased selection:bg-amber-800 selection:text-white">
@@ -53,7 +81,7 @@
                         柏
                     </div>
                     <div>
-                        <span class="text-lg font-black tracking-wider text-stone-900 block leading-none">林柏勛</span>
+                        <span class="text-lg font-black tracking-wider text-stone-900 block leading-none">13號 林柏勛</span>
                         <span class="text-xs font-medium text-amber-800 mt-1 block">松山信義 · 議員候選人</span>
                     </div>
                 </div>
@@ -97,14 +125,14 @@
     </header>
 
     <!-- 英雄視覺區塊 (Hero Section) -->
-    <section class="relative bg-gradient-to-br from-stone-900 via-stone-800 to-amber-950 text-stone-100 py-16 md:py-24 overflow-hidden">
+    <section id="about" class="relative bg-gradient-to-br from-stone-900 via-stone-800 to-amber-950 text-stone-100 py-16 md:py-24 overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#d6c7b2_1px,transparent_1px)] [background-size:16px_16px]"></div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
-                    <div class="inline-flex items-center space-x-2 bg-stone-800/80 border border-stone-700 px-4 py-1.5 rounded-full text-sm font-medium text-amber-200 shadow-inner">
-                        <i class="fa-solid fa-bullhorn text-xs"></i>
-                        <span>台北市松山信義 第三選區 議員候選人</span>
+                    <div class="inline-flex max-w-full items-center space-x-2 bg-stone-800/80 border border-stone-700 px-4 py-1.5 rounded-full text-sm font-medium text-amber-200 shadow-inner">
+                        <i class="fa-solid fa-bullhorn text-xs shrink-0"></i>
+                        <span class="min-w-0">台北市松山信義 第三選區 · 號次 13 · 議員候選人</span>
                     </div>
                     <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight">
                         體制改革 城市永續 <br/><span class="text-amber-200">松山信義 柏勛來拚</span>
@@ -126,14 +154,27 @@
                     <div class="relative w-full max-w-sm">
                         <div class="absolute -inset-1.5 bg-gradient-to-r from-amber-700 to-stone-600 rounded-3xl blur opacity-30"></div>
                         <div class="relative bg-stone-900 rounded-3xl p-3 border border-stone-800 shadow-2xl">
-                            <img 
-                                src="images/profile.jpg" 
-                                onerror="this.onerror=null; this.src='https://placehold.co/800x1100/292524/fdfbf7?text=Teddy+Lin';" 
-                                alt="林柏勛議員候選人形象照" 
-                                class="w-full h-[480px] sm:h-[560px] object-cover rounded-2xl shadow-inner"
-                            />
+                            <div class="candidate-badge-anchor relative">
+                                <picture class="block">
+                                    <source srcset="images/profile-1000.webp" type="image/webp">
+                                    <img 
+                                        src="images/profile-1000.jpg" 
+                                        width="1000"
+                                        height="1500"
+                                        loading="eager"
+                                        fetchpriority="high"
+                                        onerror="this.onerror=null; this.src='https://placehold.co/800x1100/292524/fdfbf7?text=Teddy+Lin';" 
+                                        alt="林柏勛議員候選人形象照" 
+                                        class="block w-full h-[480px] sm:h-[560px] object-cover rounded-2xl shadow-inner"
+                                    />
+                                </picture>
+                                <div class="candidate-badge pointer-events-none absolute z-10 flex aspect-square flex-col items-center justify-center rounded-full border-4 border-amber-200 bg-stone-950 text-[#fdfbf7] shadow-lg" role="img" aria-label="號次 13 號">
+                                    <span class="candidate-badge-label font-bold leading-none tracking-[0.18em] text-amber-200" aria-hidden="true">號次</span>
+                                    <span class="candidate-badge-num font-black leading-none tracking-tight" aria-hidden="true">13</span>
+                                </div>
+                            </div>
                             <div class="absolute bottom-6 left-6 right-6 bg-stone-950/80 backdrop-blur-md p-3.5 rounded-2xl border border-stone-800 text-center">
-                                <span class="text-sm font-bold text-stone-100 block">林柏勛 Teddy Lin</span>
+                                <span class="text-sm font-bold text-stone-100 block">13號 林柏勛 Teddy Lin</span>
                                 <span class="text-xs text-amber-200">松山信義區議員候選人</span>
                             </div>
                         </div>
@@ -608,7 +649,7 @@
                 <i class="fa-solid fa-hand-holding-dollar"></i>
             </div>
             <span class="text-amber-300 font-bold text-xs tracking-widest uppercase block mb-2">SUPPORT US</span>
-            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-3">糧草助拳 我來拚 松山信義林柏勛</h2>
+            <h2 class="text-2xl sm:text-3xl font-extrabold tracking-tight mb-3">糧草助拳 我來拚 13號 松山信義林柏勛</h2>
             <p class="text-stone-300 max-w-xl mx-auto mb-6 font-light text-sm">
                 改變台北需要你我一起拚！每一筆小額捐款，都是改革最強後盾。
             </p>
@@ -700,10 +741,10 @@
     <footer class="bg-stone-950 text-stone-400 py-6 border-t border-stone-800 text-center">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-1">
             <div class="flex items-center justify-center space-x-2 text-stone-100 font-bold text-sm">
-                <span>議員候選人 林柏勛</span>
+                <span>13號 議員候選人 林柏勛</span>
             </div>
             <p class="text-[11px] text-stone-500">
-                &copy; 2026 議員候選人林柏勛競選團隊. All rights reserved.
+                &copy; 2026 13號 議員候選人林柏勛競選團隊. All rights reserved.
             </p>
         </div>
     </footer>
